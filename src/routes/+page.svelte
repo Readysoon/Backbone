@@ -8,7 +8,8 @@
  <div class="mainContent">
     <div class="skeletArea">
         <div class="scanlyticsHader">
-            Scanlytics
+            <img src="/logow.jpg" alt="Logo" height="35" width="34" />
+            <h2>Scanlytics</h2>
         </div>
         <div class="skeletonBodyAra">
             <img src="skelet.png" alt="skseltImage" class="skeletImage">
@@ -33,7 +34,7 @@
                 </div>
                 <div class="alertMarkContent">
                     <div class="alertOption">
-                        Alert
+                        Status
                     </div>
                 </div>
 
@@ -244,7 +245,8 @@
         display: flex;
         align-items: center;
         padding-left: 1%;
-        font-size: 30px;
+        font-size: 32px;
+        gap: 1%;
     }
 
     .skeletonBodyAra{
