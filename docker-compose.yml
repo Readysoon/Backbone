@@ -1,36 +1,44 @@
-version: '3.8'
-
 services:
   frontend:
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "80:80"
+      - "3000:3000"
     depends_on:
       - backend
-    environment:
-      - VITE_API_URL=http://localhost:8000
-    networks:
-      - backbone-network
 
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
+    environment:
+      APP_URL: ${APP_URL}
+      SURREALDB_URL: ${SURREALDB_URL}
+      # !!! use ->http<- localhost:8000 in surrealist !!!
+      SURREALDB_USER: ${SURREALDB_USER}
+      SURREALDB_PASS: ${SURREALDB_PASS}
+      SURREALDB_NAMESPACE: ${SURREALDB_NAMESPACE}
+      SURREALDB_DATABASE: ${SURREALDB_DATABASE}
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - surrealdb
     ports:
       - "8000:8000"
-    environment:
-      - PYTHONUNBUFFERED=1
-    networks:
-      - backbone-network
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
 
-networks:
-  backbone-network:
-    driver: bridge 
+  surrealdb:
+    image: surrealdb/surrealdb:v1.5.5
+    container_name: surrealdb
+    ports:
+      - '8080:8080'
+    command:
+      - start 
+      - --log=trace 
+      - --user=${SURREALDB_USER} #default user
+      - --pass=${SURREALDB_PASS} #default password
+    # the following 3 lines are for persistant memory for local development
+      - file:/data/LocalDBData # Specify the path inside the container
+    volumes:
+      - ./backend/app/db:/data
+    restart: always
