@@ -21,24 +21,20 @@ services:
       SURREALDB_NAMESPACE: ${SURREALDB_NAMESPACE}
       SURREALDB_DATABASE: ${SURREALDB_DATABASE}
     env_file:
-      - ./backend/.env
+      - ./.env
     depends_on:
       - surrealdb
     ports:
-      - "8000:8000"
+      - "8001:8001"
 
   surrealdb:
-    image: surrealdb/surrealdb:v1.5.5
+    image: surrealdb/surrealdb:latest
     container_name: surrealdb
     ports:
-      - '8080:8080'
+      - '8000:8000'
     command:
-      - start 
-      - --log=trace 
-      - --user=${SURREALDB_USER} #default user
-      - --pass=${SURREALDB_PASS} #default password
-    # the following 3 lines are for persistant memory for local development
-      - file:/data/LocalDBData # Specify the path inside the container
-    volumes:
-      - ./backend/app/db:/data
+      - start
+      - --log=trace
+      - --user=${SURREALDB_USER}
+      - --pass=${SURREALDB_PASS}
     restart: always
