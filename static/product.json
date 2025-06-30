@@ -1,0 +1,83 @@
+{
+    "productHeader": [{
+      "IdHead": "ID",
+      "NameHead": "Name",
+      "StockHead": "Körperteil",
+      "StatusHead": "Bestand"
+    }],
+    "productContent": [
+      {
+        "Id": 1,
+        "name": "Produkt A",
+        "stock": "Clavicle",
+        "status": 80
+      },
+      {
+        "Id": 2,
+        "name": "Produkt B",
+        "stock": "Scapula",
+        "status": 60
+      },
+      {
+        "Id": 3,
+        "name": "Produkt C",
+        "stock": "Humeral shaft",
+        "status": 15
+      },
+      {
+        "Id": 4,
+        "name": "Produkt D",
+        "stock": "Proximal humerus",
+        "status": 95
+      },
+      {
+        "Id": 5,
+        "name": "Produkt E",
+        "stock": "Shoulder",
+        "status": 70
+      },
+      {
+        "Id": 6,
+        "name": "Produkt F",
+        "stock": "Forearm Shaft",
+        "status": 30
+      },
+      {
+        "Id": 7,
+        "name": "Produkt G",
+        "stock": "Distal forearm ",
+        "status": 100
+      },
+      {
+        "Id": 8,
+        "name": "Produkt H",
+        "stock": "Proximal forearm",
+        "status": 45
+      },
+      {
+        "Id": 9,
+        "name": "Produkt I",
+        "stock": "Carpal bones",
+        "status": 67
+      },
+      {
+        "Id": 10,
+        "name": "Produkt J",
+        "stock": "Metacarpals",
+        "status": 54
+      },
+      {
+        "Id": 11,
+        "name": "Produkt J",
+        "stock": "Thumb",
+        "status": 34
+      },
+      {
+        "Id": 12,
+        "name": "Produkt J",
+        "stock": "Middle Phalanges",
+        "status": 10
+      }
+    ]
+  }
+  
