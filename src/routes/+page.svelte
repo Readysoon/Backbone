@@ -2,7 +2,7 @@
 
 <script lang="ts">
 //   import * as productJson from '../../static/product.json';
-import Table from "$lib/component/table.svelte";
+import Table from "$lib/component/tableComponent/table.svelte";
 let selectedOptionState = $state("Gesamt")  
 
 
@@ -127,9 +127,9 @@ const handleTableOptionUpdate = (optionName: string) => {
         </div>
 
         <div class="listArea">
-            <div class="listContectSection">
+            
                <Table {selectedOptionState}/>
-            </div>
+           
         </div>
 
        
@@ -312,15 +312,7 @@ const handleTableOptionUpdate = (optionName: string) => {
         /* border: 1px solid #acacae; */
 
     }
-    .listContectSection{
-        width: 97%;
-        height: 100%;
-        /* background-color: #282530; */
-        background-color: #1b1b1bcd;
-        /* background-color: pink; */
-        border-radius: 7px;
-        border: 1px solid #acacae38;
-    }
+
 
     .navArea{
         /* background-color: rgb(202, 20, 20); */
