@@ -1,9 +1,16 @@
 
 
-<script>
+<script lang="ts">
 //   import * as productJson from '../../static/product.json';
 import Table from "$lib/component/table.svelte";
+let selectedOptionState = $state("Gesamt")  
 
+
+const handleTableOptionUpdate = (optionName: string) => {
+
+    selectedOptionState = optionName
+
+}
 </script>
 
 <main>
@@ -31,51 +38,97 @@ import Table from "$lib/component/table.svelte";
                   <input type="text" class="searchItemInput" placeholder="Enter Product Name">
                 </div>
                 <div class="headerMarkContent">
-                    <div class="markOption">
+                   
                       
-                        <div class="markerOptionTitle">
+                        <!-- <div class="markerOptionTitle">
                             Marker 
-                        </div>
+                        </div> -->
+                        <select name="" id="" class="markerOptionSelect">
+                            <option value="Produkt">Produkt</option>
+                            <option value="Platten">Platten (Osteosyntheseplatten)</option>
+                            <option value="Schrauben">Schrauben</option>
+                            <option value="Marknägel">Marknägel</option>
+                            <option value="Knochendrähte">Knochendrähte (Kirschnerdrähte)</option>
+                            <option value="Endoprothesen">Endoprothesen (z.B. Hüftprothese, Knieprothese)</option>
+                            <option value="Knochensubstitute">Knochensubstitute</option>
+                            <option value="Fixateure externe">Fixateure externe</option>
+                            <option value="Spacer">Spacer (Platzhalter)</option>
+                            <option value="Knochenanker">Knochenanker</option>
+                            <option value="Bandscheibenprothesen">Bandscheibenprothesen</option>
+                            <option value="Knochenzement">Knochenzement</option>
+                            <option value="Orthesen">Orthesen/Schienen</option>
+                        </select>
 
-                        <div class="markerOptionToggle">
+                        <!-- <div class="markerOptionToggle">
                             <img src="down.png" alt="down" class="dropDownIcon" >
-                        </div>
-                    </div>
+                        </div> -->
+                    
                    
                 </div>
                 <div class="alertMarkContent">
-                    <div class="statusOption">
-                        <div class="statusOptionTitle">
+                    <!-- <div class="statusOption"> -->
+                        <select name="" id="" class="statusOptionSelect">
+                            <option value="Hersteller">Hersteller</option>
+                            <option value="DePuy Synthes">DePuy Synthes (Johnson & Johnson)</option>
+                            <option value="Stryker">Stryker</option>
+                            <option value="Zimmer Biomet">Zimmer Biomet</option>
+                            <option value="Smith & Nephew">Smith & Nephew</option>
+                            <option value="B. Braun Aesculap">B. Braun Aesculap</option>
+                            <option value="Medartis">Medartis</option>
+                            <option value="Orthofix">Orthofix</option>
+                            <option value="Wright Medical">Wright Medical</option>
+                            <option value="Arthrex">Arthrex</option>
+                        </select>
+                        <!-- <div class="statusOptionTitle">
                             Channel 
-                        </div>
-
+                        </div> -->
+<!-- 
                         <div class="statusOptionToggle">
                             <img src="down.png" alt="down" class="dropDownIcon">
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div> -->
                 </div>
 
             </div>
         </div>
        
         <div class="navArea">
-           <div class="navBox1">
-            Total
+           <div class="navBox" 
+           
+           style="background-color: {selectedOptionState == "Gesamt" ? "#2369f6dd" : "#000000a7"};
+           border:{selectedOptionState == "Gesamt" ? "2px solid #004cff8f;" : " 2px solid #33333332"}
+           "
+           on:click={() => handleTableOptionUpdate("Gesamt")}>
+            Gesamt
            </div>
-           <div class="navBox">
-            Available
+           <div class="navBox"
+             
+           style="background-color: {selectedOptionState == "Verfügbar" ? "#2369f6dd" : "#000000a7"};
+           border:{selectedOptionState == "Verfügbar" ? "2px solid #004cff8f;" : " 2px solid #33333332"}
+           "
+           
+           on:click={() => handleTableOptionUpdate("Verfügbar")}>
+            Verfügbar
            </div>
-           <div class="navBox">
-            out of Stock
+           <div class="navBox" 
+           style="background-color: {selectedOptionState == "Nicht vorrätig" ? "#2369f6dd" : "#000000a7"};
+           border:{selectedOptionState == "Nicht vorrätig" ? "2px solid #004cff8f;" : " 2px solid #33333332"}
+           "
+           on:click={() => handleTableOptionUpdate("Nicht vorrätig")}>
+            Nicht vorrätig
            </div>
-           <div class="navBox">
-            Alert
+           <div class="navBox" 
+           style="background-color: {selectedOptionState == "Warnung" ? "#2369f6dd" : "#000000a7"};
+           border:{selectedOptionState == "Warnung" ? "2px solid #004cff8f;" : " 2px solid #33333332"}
+           "
+           on:click={() => handleTableOptionUpdate("Warnung")}>
+            Warnung
            </div>
         </div>
 
         <div class="listArea">
             <div class="listContectSection">
-               <Table/>
+               <Table {selectedOptionState}/>
             </div>
         </div>
 
@@ -180,33 +233,22 @@ import Table from "$lib/component/table.svelte";
         /* border-radius: 50px; */
     }
 
-    .markOption{
-        /* background-color: #fff; */
-         /* background-color: #1a0e6b; */
-        background-color: #000000a7;
-        width: 100%;
-        height: 50%;
-        display: flex;
-        border-radius: 7px;
-        border: 2px solid #33333332;
-        color: white;
-        display: flex;
-        align-items: center;
-        box-shadow: 0 0.5px 12px -4px white;
-        /* justify-content: center; */
-        font-size: 22px;
-       
-        cursor: pointer;
+  
 
-    }
-
-    .markerOptionTitle{
+    .markerOptionSelect{
         /* background-color: pink; */
-        height: 100%;
-        width: 75%;
+        background-color: #000000a7;
+        height: 50%;
+        width: 100%;
         padding-left: 5%;
         display: flex;
         align-items: center;
+        color: white;
+        font-size: 22px;
+        border-radius: 7px;
+        border: 2px solid #33333332;
+        box-shadow: 0 0.5px 12px -4px white;
+        cursor: pointer;
     }
 
 
@@ -236,31 +278,21 @@ import Table from "$lib/component/table.svelte";
         /* border-radius: 50px; */
     }
 
-    .statusOption{
+  
+    .statusOptionSelect{
         background-color: #000000a7;
-        width: 100%;
         height: 50%;
+        width: 100%;
+        /* padding-left: 5%; */
         display: flex;
+        align-items: center;
         border-radius: 7px;
-        border: 2px solid #33333332;
         color: white;
-        display: flex;
-        align-items: center;
-        /* justify-content: center; */
+        padding-left: 5%;
         font-size: 22px;
-        padding-left: 5%;
+        border: 2px solid #33333332;
+        box-shadow: 0 0.5px 12px -4px white;
         cursor: pointer;
-        /* font-family: system-ui; */
-        /* font-family:  Helvetica; */
-        
-    }
-
-    .statusOptionTitle{
-        height: 100%;
-        width: 75%;
-        padding-left: 5%;
-        display: flex;
-        align-items: center;
     }
 
     .statusOptionToggle{
@@ -313,6 +345,7 @@ import Table from "$lib/component/table.svelte";
         justify-content: center;
         align-items: center;
         color: white;
+        cursor: pointer;
         
         font-size: 22px;
     }

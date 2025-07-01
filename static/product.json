@@ -4,79 +4,176 @@
       "NameHead": "Name",
       "StockHead": "Körperteil",
       "StatusHead": "Bestand"
+
     }],
     "productContent": [
       {
         "Id": 1,
-        "name": "Produkt A",
+        "name": "Platten (Osteosyntheseplatten)",
         "stock": "Clavicle",
-        "status": 80
+        "status": 100,
+        "productzustand": "Verfügbar"
       },
       {
         "Id": 2,
-        "name": "Produkt B",
+        "name": "Schrauben",
         "stock": "Scapula",
-        "status": 60
+        "status": 74,
+        "productzustand": "Verfügbar"
       },
       {
         "Id": 3,
-        "name": "Produkt C",
+        "name": "Marknägel",
         "stock": "Humeral shaft",
-        "status": 15
+        "status": 22,
+        "productzustand": "Nicht vorrätig"
       },
       {
         "Id": 4,
-        "name": "Produkt D",
+        "name": "Knochendrähte (Kirschnerdrähte)",
         "stock": "Proximal humerus",
-        "status": 95
+        "status": 49,
+        "productzustand": "Warnung"
       },
       {
         "Id": 5,
-        "name": "Produkt E",
+        "name": "Endoprothesen (z.B. Hüftprothese, Knieprothese)",
         "stock": "Shoulder",
-        "status": 70
+        "status": 38,
+        "productzustand": "Warnung"
       },
       {
         "Id": 6,
-        "name": "Produkt F",
+        "name": "Knochensubstitute",
         "stock": "Forearm Shaft",
-        "status": 30
+        "status": 88,
+        "productzustand": "Verfügbar"
       },
       {
         "Id": 7,
-        "name": "Produkt G",
+        "name": "Fixateure externe",
         "stock": "Distal forearm ",
-        "status": 100
+        "status": 44,
+        "productzustand": "Warnung"
       },
       {
         "Id": 8,
-        "name": "Produkt H",
+        "name": "Spacer (Platzhalter)",
         "stock": "Proximal forearm",
-        "status": 45
+        "status": 32,
+        "productzustand": "Warnung"
       },
       {
         "Id": 9,
-        "name": "Produkt I",
+        "name": "Knochenanker",
         "stock": "Carpal bones",
-        "status": 67
+        "status": 27,
+        "productzustand": "Warnung"
       },
       {
         "Id": 10,
-        "name": "Produkt J",
+        "name": "Bandscheibenprothesen",
         "stock": "Metacarpals",
-        "status": 54
+        "status": 100,
+        "productzustand": "Verfügbar"
       },
       {
         "Id": 11,
-        "name": "Produkt J",
+        "name": "Knochenzement",
         "stock": "Thumb",
-        "status": 34
+        "status": 7,
+        "productzustand": "Nicht vorrätig"
       },
       {
         "Id": 12,
-        "name": "Produkt J",
+        "name": "Orthesen/Schienen",
         "stock": "Middle Phalanges",
-        "status": 10
+        "status": 25,
+        "productzustand": "Nicht vorrätig"
+      },
+      {
+        "Id": 13,
+        "name": "Platten (Osteosyntheseplatten)",
+        "stock": "Pelvis",
+        "status": 47,
+        "productzustand": "Warnung"
+      },
+      {
+        "Id": 14,
+        "name": "Schrauben",
+        "stock": "Femur",
+        "status": 5,
+        "productzustand": "Nicht vorrätig"
+      },
+      {
+        "Id": 15,
+        "name": "Marknägel",
+        "stock": "Tibia",
+        "status": 91,
+        "productzustand": "Verfügbar"
+      },
+      {
+        "Id": 16,
+        "name": "Knochendrähte (Kirschnerdrähte)",
+        "stock": "Fibula",
+        "status": 36,
+        "productzustand": "Warnung"
+      },
+      {
+        "Id": 17,
+        "name": "Endoprothesen (z.B. Hüftprothese, Knieprothese)",
+        "stock": "Patella",
+        "status": 93,
+        "productzustand": "Verfügbar"
+      },
+      {
+        "Id": 18,
+        "name": "Knochensubstitute",
+        "stock": "Talus",
+        "status": 67,
+        "productzustand": "Verfügbar"
+      },
+      {
+        "Id": 19,
+        "name": "Fixateure externe",
+        "stock": "Calcaneus",
+        "status": 41,
+        "productzustand": "Warnung"
+      },
+      {
+        "Id": 20,
+        "name": "Spacer (Platzhalter)",
+        "stock": "Vertebrae",
+        "status": 78,
+        "productzustand": "Verfügbar"
+      },
+      {
+        "Id": 21,
+        "name": "Knochenanker",
+        "stock": "Rib",
+        "status": 100,
+        "productzustand": "Verfügbar"
+      },
+      {
+        "Id": 22,
+        "name": "Bandscheibenprothesen",
+        "stock": "Mandible",
+        "status": 93,
+        "productzustand": "Verfügbar"
+      },
+      {
+        "Id": 23,
+        "name": "Knochenplatte Spezial",
+        "stock": "Sternum",
+        "status": 1,
+        "productzustand": "Nicht vorrätig"
+      },
+      {
+        "Id": 24,
+        "name": "Kunststoffspacer",
+        "stock": "Os ilium",
+        "status": 0,
+        "productzustand": "Nicht vorrätig"
       }
     ]
   }
