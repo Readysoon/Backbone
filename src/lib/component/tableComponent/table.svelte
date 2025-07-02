@@ -15,6 +15,11 @@
 
 		selectedItem = selectedItem == itemObj ? null : itemObj;
 	};
+
+	const handleReturnBackToList = () => { 
+		console.log('clickedReturnBack');
+		selectedItem = null 
+	}
 </script>
 
 
@@ -24,7 +29,10 @@
 		{#if selectedItem != null}
 			
 			<div class="ProductDetails">
-				<ProductDetails {selectedItem} />
+				<ProductDetails 
+				{selectedItem} 
+				on:returnToProduct={handleReturnBackToList}
+				/>
 			</div>
 		{:else}
 			{#each ProductData.productHeader as itemHead (itemHead)}
