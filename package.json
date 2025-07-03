@@ -34,7 +34,9 @@
 		"vite-plugin-iso-import": "^1.2.0"
 	},
 	"dependencies": {
+		"@splinetool/runtime": "^1.10.20",
 		"apexcharts": "^4.7.0",
-		"svelte-apexcharts": "^1.0.2"
+		"svelte-apexcharts": "^1.0.2",
+		"svelte-loading-spinners": "^0.3.6"
 	}
 }

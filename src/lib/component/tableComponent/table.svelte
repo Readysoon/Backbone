@@ -1,14 +1,15 @@
 <script lang="ts" module>
-	
 </script>
 
 <script lang="ts">
 	import * as ProductData from '../../../../static/product.json';
 	import ProductDetails from './productDetails.svelte';
+	import { Circle2 } from 'svelte-loading-spinners';
+
 
 	let { selectedOptionState } = $props();
-	let updatedSelectArr: any = $state([]);
 	let selectedItem: any = $state(null);
+	let LoadPage = $state(false);
 
 	const handleselectedObj = (itemObj: any) => {
 		console.log('itemObj', itemObj);
@@ -16,24 +17,38 @@
 		selectedItem = selectedItem == itemObj ? null : itemObj;
 	};
 
-	const handleReturnBackToList = () => { 
+	const handleReturnBackToList = () => {
 		console.log('clickedReturnBack');
-		selectedItem = null 
-	}
+		selectedItem = null;
+		LoadPage = false;
+	};
+
+	$effect(() => {
+		const handleLoadPage = () => {
+			const intervalId = setInterval(() => {
+				LoadPage = true;
+				clearInterval(intervalId);
+			}, 2700);
+		};
+
+		if (!LoadPage) {
+			handleLoadPage();
+		}
+	});
 </script>
-
-
 
 <div class="listContectSection">
 	{#if ProductData}
 		{#if selectedItem != null}
-			
-			<div class="ProductDetails">
-				<ProductDetails 
-				{selectedItem} 
-				on:returnToProduct={handleReturnBackToList}
-				/>
-			</div>
+			{#if LoadPage}
+				<div class="ProductDetails">
+					<ProductDetails {selectedItem} on:returnToProduct={handleReturnBackToList} />
+				</div>
+			{:else}
+				<div class="loadSection">
+					<Circle2 size="150" colorOuter="blue" unit="px" durationInner="1s" />
+				</div>
+			{/if}
 		{:else}
 			{#each ProductData.productHeader as itemHead (itemHead)}
 				<div class="productHeadSection">
@@ -90,8 +105,6 @@
 	{/if}
 </div>
 
-
-
 <style>
 	.listContectSection {
 		width: 97%;
@@ -102,9 +115,17 @@
 		border-radius: 7px;
 		border: 1px solid #acacae38;
 	}
-	.ProductDetails{
+	.ProductDetails {
 		width: 100%;
 		height: 100%;
+	}
+
+	.loadSection {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	.productHeadSection {
 		background-color: rgb(30, 31, 30);

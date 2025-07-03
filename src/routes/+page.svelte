@@ -1,6 +1,8 @@
 
 
 <script lang="ts">
+	import SkeletenArea from "$lib/component/skeletonComponent/skeletenArea.svelte";
+
 //   import * as productJson from '../../static/product.json';
 import Table from "$lib/component/tableComponent/table.svelte";
 let selectedOptionState = $state("Gesamt")  
@@ -16,16 +18,8 @@ const handleTableOptionUpdate = (optionName: string) => {
 <main>
  <div class="mainContent">
     <div class="skeletArea">
-        <div class="scanlyticsHader">
-            <img src="/logo.png" alt="Logo" height="35" width="40" />
-            <h2>Scanlytics</h2>
-        </div>
-        <div class="skeletonBodyAra">
-            <img src="skelet.png" alt="skseltImage" class="skeletImage">
-        </div>
-       
-
-
+        
+        <SkeletenArea/>
 
     </div>
      <div class="invetarArea">
@@ -382,32 +376,6 @@ const handleTableOptionUpdate = (optionName: string) => {
         align-items: center;
     }
 
-    .scanlyticsHader{
-        width: 100%;
-        height: 7%;
-        /* background-color: pink; */
-        font-family: system-ui;
-        color: black;
-        display: flex;
-        align-items: center;
-        padding-left: 1%;
-        font-size: 33px;
-        gap: 1%;
-    }
-
-    .skeletonBodyAra{
-        width: 100%;
-        height: 90%;
-        /* background-color: green; */
-        display: flex;
-        align-items: center;
-       justify-content: center;
-    }
-
-    .skeletImage{
-        width: 40%;
-        height: 77%;
-    }
 
 
 </style>

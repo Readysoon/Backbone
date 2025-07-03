@@ -303,11 +303,11 @@
 	.productMetaDataSection {
 		width: 50%;
 		height: 100%;
-        /* padding-top: 2%; */
+        padding-top: 2%;
         display: flex;
         flex-direction: column;
 		/* align-items: center; */
-        gap: 1%;
+        gap: 3%;
         justify-content: center;
         /* align-items: center; */
     

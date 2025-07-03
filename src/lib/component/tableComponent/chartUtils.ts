@@ -20,14 +20,14 @@ export function getApexChart(productName: string, chartData: number) {
         toolbar: { show: false },
       },
       title: {
-        text: "Produkt Verlaufsübersicht", // This will show the name as the chart title
+        text: "Verlaufsübersicht (2018 - 2025)", // This will show the name as the chart title
         align: 'center', 
         offsetY: 18, 
           // You can use 'left', 'center', or 'right'
         style: {
          
           color: '#fff',   // Optional: set title color
-          fontSize: '20px', 
+          fontSize: '18px', 
           
           
         }
