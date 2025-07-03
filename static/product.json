@@ -19,7 +19,8 @@
         "bewahrungsort": "OG.6 | Raum: 777 | Schrank: 45",
         "bestellungstag": "01.05.2025",
         "ansprechpartner": "Frau Birkmann",
-        "beschreibung": "Diese Osteosyntheseplatte eignet sich ideal für die Versorgung von Schlüsselbeinfrakturen. Sie ist aus hochwertigem Titan gefertigt und bietet eine hohe Stabilität."
+        "beschreibung": "Diese Osteosyntheseplatte eignet sich ideal für die Versorgung von Schlüsselbeinfrakturen. Sie ist aus hochwertigem Titan gefertigt und bietet eine hohe Stabilität.",
+        "chartData": [30, 40, -50, -60, 0, 80, 90, 100, 125]
       },
       {
         "Id": 2,
@@ -33,7 +34,8 @@
         "bewahrungsort": "EG.2 | Raum: 101 | Schrank: 12",
         "bestellungstag": "15.03.2024",
         "ansprechpartner": "Herr Müller",
-        "beschreibung": "Die Spezialschrauben sind für die Fixierung an der Scapula konzipiert. Sie ermöglichen eine sichere und dauerhafte Stabilisierung des Knochens."
+        "beschreibung": "Die Spezialschrauben sind für die Fixierung an der Scapula konzipiert. Sie ermöglichen eine sichere und dauerhafte Stabilisierung des Knochens.",
+        "chartData": [120, 80, 45, 65, -5, 75, 85, 95, 105]
       },
       {
         "Id": 3,
@@ -47,7 +49,8 @@
         "bewahrungsort": "UG.1 | Raum: 202 | Schrank: 33",
         "bestellungstag": "22.11.2023",
         "ansprechpartner": "Dr. Schmidt",
-        "beschreibung": "Marknägel werden zur intramedullären Stabilisierung von Frakturen eingesetzt. Sie sind besonders für den Humerusschaft geeignet."
+        "beschreibung": "Marknägel werden zur intramedullären Stabilisierung von Frakturen eingesetzt. Sie sind besonders für den Humerusschaft geeignet.",
+        "chartData": [30, 20, 10, -10, -20, -30, -40, -50, -60]
       },
       {
         "Id": 4,
@@ -61,7 +64,8 @@
         "bewahrungsort": "OG.3 | Raum: 333 | Schrank: 21",
         "bestellungstag": "10.07.2024",
         "ansprechpartner": "Frau Weber",
-        "beschreibung": "Kirschnerdrähte dienen der temporären Fixierung von Knochenfragmenten. Sie sind einfach zu platzieren und vielseitig einsetzbar."
+        "beschreibung": "Kirschnerdrähte dienen der temporären Fixierung von Knochenfragmenten. Sie sind einfach zu platzieren und vielseitig einsetzbar.",
+        "chartData": [30, 40, 35, 30, 25, 20, 25, 30, 35]
       },
       {
         "Id": 5,
@@ -75,7 +79,8 @@
         "bewahrungsort": "EG.1 | Raum: 120 | Schrank: 5",
         "bestellungstag": "05.09.2023",
         "ansprechpartner": "Herr Becker",
-        "beschreibung": "Diese Endoprothese ist speziell für das Schultergelenk entwickelt. Sie ermöglicht eine schnelle Wiederherstellung der Mobilität nach schweren Verletzungen."
+        "beschreibung": "Diese Endoprothese ist speziell für das Schultergelenk entwickelt. Sie ermöglicht eine schnelle Wiederherstellung der Mobilität nach schweren Verletzungen.",
+        "chartData": [30, 40, 35, 30, 25, 20, 25, 30, 35]
       },
       {
         "Id": 6,
@@ -89,7 +94,8 @@
         "bewahrungsort": "OG.2 | Raum: 210 | Schrank: 18",
         "bestellungstag": "18.02.2024",
         "ansprechpartner": "Frau Klein",
-        "beschreibung": "Das Knochensubstitut fördert die Regeneration bei Knochendefekten. Es ist biokompatibel und resorbierbar."
+        "beschreibung": "Das Knochensubstitut fördert die Regeneration bei Knochendefekten. Es ist biokompatibel und resorbierbar.",
+        "chartData": [30, 40, 50, 60, 70, 80, 90, 100, 125]
       },
       {
         "Id": 7,
@@ -103,7 +109,8 @@
         "bewahrungsort": "UG.2 | Raum: 404 | Schrank: 9",
         "bestellungstag": "30.06.2024",
         "ansprechpartner": "Herr Braun",
-        "beschreibung": "Externe Fixateure stabilisieren Frakturen von außen und ermöglichen eine flexible Nachbehandlung. Sie sind mehrfach verwendbar."
+        "beschreibung": "Externe Fixateure stabilisieren Frakturen von außen und ermöglichen eine flexible Nachbehandlung. Sie sind mehrfach verwendbar.",
+        "chartData": [30, 40, 35, 30, 25, 20, 25, 30, 35]
       },
       {
         "Id": 8,
@@ -117,7 +124,8 @@
         "bewahrungsort": "OG.5 | Raum: 555 | Schrank: 23",
         "bestellungstag": "12.12.2023",
         "ansprechpartner": "Frau Sommer",
-        "beschreibung": "Der Spacer dient als temporärer Platzhalter bei Gelenkoperationen. Er verhindert das Zusammenwachsen von Gewebe während der Heilung."
+        "beschreibung": "Der Spacer dient als temporärer Platzhalter bei Gelenkoperationen. Er verhindert das Zusammenwachsen von Gewebe während der Heilung.",
+        "chartData": [30, 40, 35, 30, 25, 20, 25, 30, 35]
       },
       {
         "Id": 9,
@@ -131,7 +139,8 @@
         "bewahrungsort": "EG.3 | Raum: 303 | Schrank: 7",
         "bestellungstag": "08.08.2024",
         "ansprechpartner": "Herr König",
-        "beschreibung": "Knochenanker werden zur Fixierung von Sehnen und Bändern am Knochen verwendet. Sie bieten eine hohe Zugfestigkeit."
+        "beschreibung": "Knochenanker werden zur Fixierung von Sehnen und Bändern am Knochen verwendet. Sie bieten eine hohe Zugfestigkeit.",
+        "chartData": [30, 40, 35, 30, 25, 20, 25, 30, 35]
       },
       {
         "Id": 10,
@@ -145,7 +154,8 @@
         "bewahrungsort": "OG.4 | Raum: 444 | Schrank: 16",
         "bestellungstag": "25.04.2025",
         "ansprechpartner": "Frau Schmitt",
-        "beschreibung": "Die Bandscheibenprothese ersetzt beschädigte Bandscheiben und stellt die Beweglichkeit der Wirbelsäule wieder her. Sie ist langlebig und flexibel."
+        "beschreibung": "Die Bandscheibenprothese ersetzt beschädigte Bandscheiben und stellt die Beweglichkeit der Wirbelsäule wieder her. Sie ist langlebig und flexibel.",
+        "chartData": [30, 40, 50, 60, 70, 80, 90, 100, 125]
       },
       {
         "Id": 11,
@@ -159,7 +169,8 @@
         "bewahrungsort": "OG.7 | Raum: 888 | Schrank: 5",
         "bestellungstag": "01.01.2025",
         "ansprechpartner": "Frau Meier",
-        "beschreibung": "Künstliches Knochenzement"
+        "beschreibung": "Künstliches Knochenzement",
+        "chartData": [30, 20, 10, -10, -20, -30, -40, -50, -60]
       },
       {
         "Id": 12,
@@ -173,7 +184,8 @@
         "bewahrungsort": "EG.4 | Raum: 555 | Schrank: 10",
         "bestellungstag": "15.05.2025",
         "ansprechpartner": "Herr Lang",
-        "beschreibung": "Orthese für Mittelfinger"
+        "beschreibung": "Orthese für Mittelfinger",
+        "chartData": [30, 20, 10, -10, -20, -30, -40, -50, -60]
       },
       {
         "Id": 13,
@@ -187,7 +199,8 @@
         "bewahrungsort": "OG.8 | Raum: 999 | Schrank: 15",
         "bestellungstag": "25.06.2025",
         "ansprechpartner": "Frau Weber",
-        "beschreibung": "Standardplatte für Osteosynthese"
+        "beschreibung": "Standardplatte für Osteosynthese",
+        "chartData": [30, 40, 35, 30, 25, 20, 25, 30, 35]
       },
       {
         "Id": 14,
@@ -201,7 +214,8 @@
         "bewahrungsort": "EG.5 | Raum: 666 | Schrank: 20",
         "bestellungstag": "10.08.2025",
         "ansprechpartner": "Herr Müller",
-        "beschreibung": "Spezialschraube für Femur"
+        "beschreibung": "Spezialschraube für Femur",
+        "chartData": [30, 20, 10, -10, -20, -30, -40, -50, -60]
       },
       {
         "Id": 15,
@@ -215,7 +229,8 @@
         "bewahrungsort": "UG.3 | Raum: 777 | Schrank: 30",
         "bestellungstag": "20.09.2025",
         "ansprechpartner": "Dr. Schmidt",
-        "beschreibung": "Marknagel für Tibia"
+        "beschreibung": "Marknagel für Tibia",
+        "chartData": [30, 40, 50, 60, 70, 80, 90, 100, 125]
       },
       {
         "Id": 16,
@@ -229,7 +244,8 @@
         "bewahrungsort": "OG.4 | Raum: 888 | Schrank: 25",
         "bestellungstag": "15.10.2025",
         "ansprechpartner": "Frau Weber",
-        "beschreibung": "Kirschnerdraht für Fibula"
+        "beschreibung": "Kirschnerdraht für Fibula",
+        "chartData": [30, 40, 35, 30, 25, 20, 25, 30, 35]
       },
       {
         "Id": 17,
@@ -243,7 +259,8 @@
         "bewahrungsort": "EG.6 | Raum: 999 | Schrank: 35",
         "bestellungstag": "05.11.2025",
         "ansprechpartner": "Herr Becker",
-        "beschreibung": "Endoprothese für Kniegelenk"
+        "beschreibung": "Endoprothese für Kniegelenk",
+        "chartData": [30, 40, 50, 60, 70, 80, 90, 100, 125]
       },
       {
         "Id": 18,
@@ -257,7 +274,8 @@
         "bewahrungsort": "OG.5 | Raum: 1010 | Schrank: 40",
         "bestellungstag": "15.12.2025",
         "ansprechpartner": "Frau Klein",
-        "beschreibung": "Künstliches Knochensubstitut"
+        "beschreibung": "Künstliches Knochensubstitut",
+        "chartData": [30, 40, 50, 60, 70, 80, 90, 100, 125]
       },
       {
         "Id": 19,
@@ -271,7 +289,8 @@
         "bewahrungsort": "UG.4 | Raum: 1111 | Schrank: 50",
         "bestellungstag": "25.01.2026",
         "ansprechpartner": "Herr Braun",
-        "beschreibung": "Externer Fixateur für Fuß"
+        "beschreibung": "Externer Fixateur für Fuß",
+        "chartData": [30, 40, 35, 30, 25, 20, 25, 30, 35]
       },
       {
         "Id": 20,
@@ -285,7 +304,8 @@
         "bewahrungsort": "OG.7 | Raum: 1212 | Schrank: 60",
         "bestellungstag": "10.03.2026",
         "ansprechpartner": "Frau Sommer",
-        "beschreibung": "Platzhalter für Wirbelsäule"
+        "beschreibung": "Platzhalter für Wirbelsäule",
+        "chartData": [30, 40, 35, 30, 25, 20, 25, 30, 35]
       },
       {
         "Id": 21,
@@ -299,7 +319,8 @@
         "bewahrungsort": "EG.8 | Raum: 1313 | Schrank: 70",
         "bestellungstag": "20.04.2026",
         "ansprechpartner": "Herr König",
-        "beschreibung": "Knochenanker für Rippen"
+        "beschreibung": "Knochenanker für Rippen",
+        "chartData": [30, 40, 50, 60, 70, 80, 90, 100, 125]
       },
       {
         "Id": 22,
@@ -313,7 +334,8 @@
         "bewahrungsort": "OG.9 | Raum: 1414 | Schrank: 80",
         "bestellungstag": "05.05.2026",
         "ansprechpartner": "Frau Schmitt",
-        "beschreibung": "Prothese für Kiefer"
+        "beschreibung": "Prothese für Kiefer",
+        "chartData": [30, 40, 50, 60, 70, 80, 90, 100, 125]
       },
       {
         "Id": 23,
@@ -327,7 +349,8 @@
         "bewahrungsort": "OG.10 | Raum: 1515 | Schrank: 90",
         "bestellungstag": "15.06.2026",
         "ansprechpartner": "Frau Meier",
-        "beschreibung": "Spezialplatte für Brustbein"
+        "beschreibung": "Spezialplatte für Brustbein",
+        "chartData": [30, 20, 10, -10, -20, -30, -40, -50, -60]
       },
       {
         "Id": 24,
@@ -341,7 +364,8 @@
         "bewahrungsort": "EG.9 | Raum: 1616 | Schrank: 100",
         "bestellungstag": "25.07.2026",
         "ansprechpartner": "Herr Lang",
-        "beschreibung": "Kunststoffspacer für Oberschenkelbein"
+        "beschreibung": "Kunststoffspacer für Oberschenkelbein",
+        "chartData": [30, 20, 10, -10, -20, -30, -40, -50, -60]
       }
     ]
   }

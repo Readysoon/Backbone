@@ -4,6 +4,8 @@
 	import AreaChart from './AreaChart.svelte';
 	const dispath = createEventDispatcher();
 	let imgData = $state('p1.png');
+	
+
 
 	let images = $state([`dp1.png`, `dp3.png`, `dp4.png`]);
 
@@ -20,6 +22,9 @@
 			imgData = imgObj;
 		}
 	};
+
+
+	
 </script>
 
 <div class="detailsComponentSection">
@@ -151,7 +156,9 @@
 		</div>
 	</div>
 	<div class="DescriptionSection">
-        <AreaChart/>
+        <AreaChart
+		{selectedItem}
+		 />
     </div>
 </div>
 
@@ -260,8 +267,8 @@
 		height: 30%;
 		/* background-color: rgb(243, 113, 113); */
 		display: flex;
-		/* gap: 11%; */
-		padding: 1%;
+		gap: 8%;
+		/* padding: 1%; */
 
 		justify-content: space-around;
 		align-items: center;
@@ -296,11 +303,12 @@
 	.productMetaDataSection {
 		width: 50%;
 		height: 100%;
-        padding-top: 2%;
+        /* padding-top: 2%; */
         display: flex;
         flex-direction: column;
+		/* align-items: center; */
         gap: 1%;
-        /* justify-content: center; */
+        justify-content: center;
         /* align-items: center; */
     
 		/* border-right: 1px solid white; */
@@ -308,24 +316,12 @@
 		/* border-left: 1px solid white; */
 	}
 
-	.productMetaHeader {
-		width: 100%;
-		height: 10%;
-		/* background-color: #fff; */
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding-left: 4%;
-		font-size: 20px;
-		color: white;
-		/* border-bottom: 1px solid white; */
-		/* border-right: 1px solid white; */
-	}
+	
 
 	.productMetaTab {
 		width: 100%;
 		height: 7%;
-		/* background-color: #fff; */
+		/* background-color: #b14d4d9c; */
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -337,7 +333,7 @@
     .productMetaDescription{
         width: 100%;
 		height: 23%;
-		/* background-color: #fff; */
+		/* background-color: #24e250; */
 		display: flex;
 		justify-content: space-between;
 		/* align-items: center; */
