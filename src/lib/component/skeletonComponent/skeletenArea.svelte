@@ -335,6 +335,9 @@
 		border-top-left-radius: 50px;
 		border-bottom-left-radius: 50px;
 		padding-left: 5%;
+        display: flex;
+        align-items: center;
+        font-size: 30px;
 	}
 
 	.shoulderTitle1dot1Icon {
