@@ -60,6 +60,7 @@ body {
 	/*  Skelet Section body Point  Section */
 
 	--bodyPointsTitleFontSize: 40px; 
+	--bodyplusFontSize: 40px
 
 }
 /* Media Queries */
@@ -90,7 +91,10 @@ body {
 		/*  Skelet Section body Point  Section */
 
 	--bodyPointsTitleFontSize: 40px; 
-	--bodyplusFontSize: 40px
+	--bodyplusFontSize: 40px;
+	--bodyPin1LeftPosition: -1%; 
+	--bodyPin1TopPostion: 20%;
+
 
 	
 	}
@@ -128,7 +132,9 @@ body {
 		/*  Skelet Section body Point  Section */
 
 	--bodyPointsTitleFontSize: 19px; 
-	--bodyplusFontSize: 27px
+	--bodyplusFontSize: 27px;
+	--bodyPin1LeftPosition: 35%; 
+	--bodyPin1TopPostion: 25%;
 
 	}
 	
@@ -165,8 +171,9 @@ body {
 			/*  Skelet Section body Point  Section */
 
 	--bodyPointsTitleFontSize: 20px; 
-	--bodyplusFontSize: 30px
-
+	--bodyplusFontSize: 30px;
+	--bodyPin1LeftPosition: 37%; 
+		--bodyPin1TopPostion: 25%;
 	}
 	
 }	
@@ -203,7 +210,9 @@ body {
 		/*  Skelet Section body Point  Section */
 
 		--bodyPointsTitleFontSize: 30px; 
-		--bodyplusFontSize: 40px
+		--bodyplusFontSize: 40px;
+		--bodyPin1LeftPosition: 37%; 
+		--bodyPin1TopPostion: 25%;
 
 	}
 }

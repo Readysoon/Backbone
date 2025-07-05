@@ -369,8 +369,8 @@
 
 	.red-dot {
 		position: absolute;
-		left: 37%; /* Adjust to match head position */
-		top: 25%; /* Adjust to match head position */
+	    left: var(--bodyPin1LeftPosition); /* Adjust to match head position */
+		top: var(--bodyPin1TopPostion); /* Adjust to match head position */
 		width: 5%;
 		height: 4%;
 		background: rgba(255, 0, 0, 0.59);
@@ -379,7 +379,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		font-size: 40px;
+		font-size: var(--bodyplusFontSize);
 		cursor: pointer;
 	}
 
@@ -395,7 +395,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		font-size: 40px;
+		font-size: var(--bodyplusFontSize);
 		cursor: pointer;
 	}
 
@@ -411,7 +411,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		font-size: 40px;
+		font-size: var(--bodyplusFontSize);
 		cursor: pointer;
 	}
 	.skeletImage {
@@ -470,6 +470,7 @@
     }
 
     .shoulderSection:hover{
-        background-color:  rgba(255, 0, 0, 0.59);
+        background-color:  rgba(249, 6, 6, 0.629);
+		border: none;
     }
 </style>
