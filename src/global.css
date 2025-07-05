@@ -1,57 +1,153 @@
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  /* 2. Remove default margin */
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    /* 3. Add accessible line-height */
-    line-height: 1.5;
-    /* 4. Improve text rendering */
-    -webkit-font-smoothing: antialiased;
-    overflow: hidden;
-   
-    
-    /* width: 100%;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	/* 3. Add accessible line-height */
+	line-height: 1.5;
+	/* 4. Improve text rendering */
+	-webkit-font-smoothing: antialiased;
+	overflow: hidden;
+
+	/* width: 100%;
     height: 100%; */
-    
-    background-color: rgb(0, 0, 0); 
-  }
-  
-  /* 5. Improve media defaults */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  
-  /* 6. Inherit fonts for form controls */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  
-  /* 7. Avoid text overflows */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  
-  /* 8. Improve line wrapping */
-  p {
-    text-wrap: pretty;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-  }
-  
-  /*
+
+	background-color: rgb(0, 0, 0);
+}
+
+:root{
+	/* --leftHeaderBackground: grey;  */
+	--Leftheader-height:  7%;
+	--leftHeaderInput-hieight: 50%;
+	--leftHeader-fontSize: 20px;
+	/* --tableHeaderBackground: pink;  */
+	--tableHeaderFont-Size: 19px;
+	--tableFont-Size: 19px;
+	--tableminHeight: 38px;
+
+	/* --tabBackground: grey;  */
+
+}
+/* Media Queries */
+/* Smart Phones */
+@media (min-width: 320px) and (max-width: 460px) {
+}
+/*  ipads (e.g. 1366px - 1440px wide) */
+@media (min-width: 768px) {
+	:root{
+		/* --leftHeaderBackground: rgb(222, 12, 250);  */
+		--Leftheader-height:  7%;
+		--leftHeaderInput-hieight: 50%;
+		--leftHeaderSearchInput-fontSize: 22px;
+		/* --tableHeaderBackground: rgb(200, 45, 71);  */
+		--tableHeaderFont-Size: 19px;
+		--tableFont-Size: 19px;
+		--tableminHeight: 53px;
+		/* --tabBackground: green;  */
+	}
+}
+
+
+/* Small laptops (e.g. 1366px - 1440px wide) */
+@media (min-width: 1280px) {
+	:root{
+		/* --leftHeaderBackground: rgb(230, 230, 230);  */
+		--Leftheader-height:  7%;
+		--leftHeaderInput-hieight: 50%;
+		--leftHeader-fontSize: 13px;
+		/* --tableHeaderBackground: rgb(35, 172, 28);  */
+		--tableHeaderFont-Size: 12px;
+		--tableFont-Size: 11px;
+		--tableminHeight: 25px;
+		/* --tabBackground: rgb(0, 111, 128); */
+	}
+	
+}
+/* Mid laptops (your 1807px screen) */
+@media (min-width: 1700px) {
+	:root{
+		/* --leftHeaderBackground: rgb(216, 117, 18);  */
+		--Leftheader-height:  7%;
+		--leftHeaderInput-hieight: 50%;
+		--leftHeader-fontSize: 14px;
+		/* --tableHeaderBackground: rgb(103, 88, 242);  */
+		--tableHeaderFont-Size: 13px;
+		--tableFont-Size: 12px;
+		--tableminHeight: 30px;
+		/* --tabBackground: rgb(128, 0, 0); */
+	}
+	
+}	
+/* Large Screen */
+@media (min-width: 2560px) {
+	:root{
+		/* --leftHeaderBackground: rgb(31, 250, 170);  */
+		--Leftheader-height:  7%;
+		--leftHeaderInput-hieight: 50%;
+		--leftHeader-fontSize: 20px;
+		/* --tableHeaderBackground: rgb(227, 124, 21);  */
+		--tableHeaderFont-Size: 19px;
+		--tableFont-Size: 17px;
+		--tableminHeight: 43px;
+		/* --tabBackground: rgb(28, 128, 0); */
+	}
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+/*
     9. Create a root stacking context
   */
-  #root, #__next {
-    isolation: isolate;
-  }
-
-
+#root,
+#__next {
+	isolation: isolate;
+}

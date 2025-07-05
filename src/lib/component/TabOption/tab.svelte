@@ -50,7 +50,7 @@ border:{selectedOptionState == 'Warnung' ? '2px solid #004cff8f;' : ' 2px solid 
 
 <style>
 	.navArea {
-		/* background-color: rgb(202, 20, 20); */
+		background-color: var(--tabBackground);
 		width: 100%;
 		height: 7%;
 		display: flex;
@@ -72,7 +72,7 @@ border:{selectedOptionState == 'Warnung' ? '2px solid #004cff8f;' : ' 2px solid 
 		color: white;
 		cursor: pointer;
 
-		font-size: 22px;
+		font-size: var(--leftHeader-fontSize);
 	}
 
 /*     

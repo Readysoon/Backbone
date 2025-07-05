@@ -48,9 +48,9 @@
 
 <style>
 	.headerArea {
-		/* background-color: grey; */
+		background-color: var(--leftHeaderBackground);
 		width: 100%;
-		height: 7%;
+		height: var(--Leftheader-height);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -80,11 +80,11 @@
 	.searchItemInput {
 		background-color: #ffffff8b;
 		width: 100%;
-		height: 50%;
+		height: var(--leftHeaderInput-hieight);
 		display: flex;
 		border-radius: 50px;
 		padding-left: 3%;
-		font-size: 22px;
+		font-size: var(--leftHeader-fontSize);
 	}
 	.headerMarkContent {
 		/* background-color: pink; */
@@ -105,7 +105,7 @@
 		display: flex;
 		align-items: center;
 		color: white;
-		font-size: 22px;
+		font-size: var(--leftHeader-fontSize);
 		border-radius: 7px;
 		border: 2px solid #33333332;
 		box-shadow: 0 0.5px 12px -4px white;
@@ -134,7 +134,7 @@
 		border-radius: 7px;
 		color: white;
 		padding-left: 5%;
-		font-size: 22px;
+		font-size: var(--leftHeader-fontSize);;
 		border: 2px solid #33333332;
 		box-shadow: 0 0.5px 12px -4px white;
 		cursor: pointer;

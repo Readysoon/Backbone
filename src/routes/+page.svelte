@@ -53,7 +53,7 @@
 	}
 
 	.invetarArea {
-		background-color: pink;
+		/* background-color: pink; */
 		height: 100%;
 		width: 50%;
 		display: flex;

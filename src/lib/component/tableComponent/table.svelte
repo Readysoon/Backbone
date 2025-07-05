@@ -6,7 +6,6 @@
 	import ProductDetails from './productDetails.svelte';
 	import { Circle2 } from 'svelte-loading-spinners';
 
-
 	let { selectedOptionState } = $props();
 	let selectedItem: any = $state(null);
 	let LoadPage = $state(false);
@@ -38,87 +37,92 @@
 </script>
 
 <div class="listArea">
-
-
-<div class="listContectSection">
-	{#if ProductData}
-		{#if selectedItem != null}
-			{#if LoadPage}
-				<div class="ProductDetails">
-					<ProductDetails {selectedItem} on:returnToProduct={handleReturnBackToList} />
-				</div>
+	<div class="listContectSection">
+		{#if ProductData}
+			{#if selectedItem != null}
+				{#if LoadPage}
+					<div class="ProductDetails">
+						<ProductDetails {selectedItem} on:returnToProduct={handleReturnBackToList} />
+					</div>
+				{:else}
+					<div class="loadSection">
+						<Circle2 size="150" colorOuter="blue" unit="px" durationInner="1s" />
+					</div>
+				{/if}
 			{:else}
-				<div class="loadSection">
-					<Circle2 size="150" colorOuter="blue" unit="px" durationInner="1s" />
-				</div>
-			{/if}
-		{:else}
-			{#each ProductData.productHeader as itemHead (itemHead)}
-				<div class="productHeadSection">
-					<div class="boxId">
-						{itemHead.IdHead}
+				{#each ProductData.productHeader as itemHead (itemHead)}
+					<div class="productHeadSection">
+						<div class="boxId">
+							{itemHead.IdHead}
+						</div>
+						<div
+							class="boxName"
+							style="width: {selectedOptionState === 'Verfügbar'
+								? '40%'
+								: selectedOptionState === 'Nicht vorrätig'
+									? '40%'
+									: '39.5%'}"
+						>
+							{itemHead.NameHead}
+						</div>
+						<div class="boxBestand">
+							{itemHead.StockHead}
+						</div>
+						<div class="boxStatus">
+							{itemHead.StatusHead}
+						</div>
 					</div>
-					<div class="boxName">
-						{itemHead.NameHead}
-					</div>
-					<div class="boxBestand">
-						{itemHead.StockHead}
-					</div>
-					<div class="boxStatus">
-						{itemHead.StatusHead}
-					</div>
-				</div>
 
-				<div class="productContentSection">
-					{#each ProductData.productContent.filter( (item: any) => (selectedOptionState == 'Gesamt' ? item.productzustand != selectedOptionState : item.productzustand == selectedOptionState) ) as itemContent (itemContent)}
-						<div class="boxContentObj" on:click={() => handleselectedObj(itemContent)}>
-							<div class="contentId">
-								{itemContent.Id}
-							</div>
+					<div class="productContentSection">
+						{#each ProductData.productContent.filter( (item: any) => (selectedOptionState == 'Gesamt' ? item.productzustand != selectedOptionState : item.productzustand == selectedOptionState) ) as itemContent (itemContent)}
+							<div class="boxContentObj" on:click={() => handleselectedObj(itemContent)}>
+								<div class="contentId">
+									{itemContent.Id}
+								</div>
 
-							<div class="contentName">
-								{itemContent.name}
-							</div>
+								<div class="contentName">
+									{itemContent.name}
+								</div>
 
-							<div class="contentBestand">
-								{itemContent.stock}
-							</div>
+								<div class="contentBestand">
+									{itemContent.stock}
+								</div>
 
-							<div class="contentStatus">
-								<!-- {itemContent.stock} -->
-								<div class="backBar">
-									<div
-										class="loadBar"
-										style="
+								<div class="contentStatus">
+									<!-- {itemContent.stock} -->
+									<div class="backBar">
+										<div
+											class="loadBar"
+											style="
                   background-color: {itemContent.status <= 25
-											? 'red'
-											: itemContent.status <= 50
-												? 'orange'
-												: 'green'};
+												? 'red'
+												: itemContent.status <= 50
+													? 'orange'
+													: 'green'};
                   width:  {itemContent.status && `${itemContent.status}%`};
                   "
-									></div>
+										></div>
+									</div>
 								</div>
 							</div>
-						</div>
-					{/each}
-				</div>
-			{/each}
+						{/each}
+					</div>
+				{/each}
+			{/if}
 		{/if}
-	{/if}
-</div>
+	</div>
 </div>
 
 <style>
 	.listArea {
-	/* background-color: black; */
-	width: 100%;
-	height: 85%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	/* border: 1px solid #acacae; */
-}
+		/* background-color: black; */
+		width: 100%;
+		height: 85%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* border: 1px solid #acacae; */
+	}
 	.listContectSection {
 		width: 97%;
 		height: 100%;
@@ -142,6 +146,7 @@
 	}
 	.productHeadSection {
 		background-color: rgb(30, 31, 30);
+		/* background-color: var(--tableHeaderBackground); */
 		height: 5%;
 		width: 100%;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.397);
@@ -189,18 +194,22 @@
 		align-items: center;
 		border-right: 1px solid rgba(255, 255, 255, 0.397);
 		color: white;
-		font-size: 19px;
+		font-size: var(--tableHeaderFont-Size);
+		font-weight: bold;
+		font-family: system-ui;
 	}
 
 	.boxName {
-		width: 39.4%;
+		width: 39.5%;
 		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		border-right: 1px solid rgba(255, 255, 255, 0.397);
 		color: white;
-		font-size: 19px;
+		font-size: var(--tableHeaderFont-Size);
+		font-weight: bold;
+		font-family: system-ui;
 	}
 
 	.boxBestand {
@@ -211,7 +220,9 @@
 		align-items: center;
 		border-right: 1px solid rgba(255, 255, 255, 0.397);
 		color: white;
-		font-size: 19px;
+		font-size: var(--tableHeaderFont-Size);
+		font-weight: bold;
+		font-family: system-ui;
 	}
 
 	.boxStatus {
@@ -223,14 +234,17 @@
 		align-items: center;
 		/* border-right: 1px solid rgba(255, 255, 255, 0.397); */
 		color: white;
-		font-size: 19px;
+		font-size: var(--tableHeaderFont-Size);
+		font-weight: bold;
+		font-family: system-ui;
 	}
 
 	.boxContentObj {
 		width: 100%;
-		height: 60px;
-		min-height: 53px;
+		/* height: 60px; */
+		min-height: var(--tableminHeight);
 		background-color: #f8f9f91d;
+
 		display: flex;
 		/* justify-content: center; */
 		align-items: center;
@@ -255,7 +269,7 @@
 		align-items: center;
 		border-right: 1px solid rgba(255, 255, 255, 0.397);
 		color: white;
-		font-size: 19px;
+		font-size: var(--tableFont-Size);
 	}
 
 	.contentName {
@@ -266,7 +280,7 @@
 		align-items: center;
 		border-right: 1px solid rgba(255, 255, 255, 0.397);
 		color: white;
-		font-size: 19px;
+		font-size: var(--tableFont-Size);
 	}
 
 	.contentBestand {
@@ -277,7 +291,7 @@
 		align-items: center;
 		border-right: 1px solid rgba(255, 255, 255, 0.397);
 		color: white;
-		font-size: 19px;
+		font-size: var(--tableFont-Size);
 	}
 
 	.contentStatus {
@@ -288,7 +302,7 @@
 		align-items: center;
 		/* border-right: 1px solid rgba(255, 255, 255, 0.397); */
 		color: white;
-		font-size: 19px;
+		font-size: var(--tableFont-Size);
 	}
 
 	.backBar {
