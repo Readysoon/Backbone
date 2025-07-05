@@ -211,7 +211,7 @@
 		height: 60%;
 		/* background-color: #fff; */
 		border-radius: 7px;
-		border: 2px solid white;
+		border: 1px solid white;
 		display: flex;
 		justify-content: center;
 		align-items: center;
