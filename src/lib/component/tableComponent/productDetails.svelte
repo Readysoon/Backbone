@@ -189,7 +189,7 @@
 		padding-left: 2%;
 		display: flex;
 		align-items: center;
-		font-size: var(--productFontSize);
+		font-size: var(--productHeaderFontSize);
 		color: white;
 	}
 
@@ -326,7 +326,7 @@
 		justify-content: space-between;
 		align-items: center;
 		padding-left: 4%;
-		font-size: 20px;
+		font-size: var(--productTextFontSize);
 		color: white;
 	}
 
@@ -338,7 +338,7 @@
 		justify-content: space-between;
 		/* align-items: center; */
 		padding-left: 4%;
-		font-size: 20px;
+		font-size: var(--productTextFontSize);
 		color: white;
     }
 

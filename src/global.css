@@ -45,7 +45,8 @@ body {
 
 	/* Product Component */
 
-	--productFontSize:  30px;
+	--productHeaderFontSize:  30px;
+	--productTextFontSize: 20px;
 
 	/* --tabBackground: grey;  */
 
@@ -71,7 +72,8 @@ body {
 
 
 		/* Product Component */
-		--productFontSize:  30px;
+		--productHeaderFontSize:  30px;
+		--productTextFontSize: 20px;
 	
 	}
 }
@@ -95,7 +97,8 @@ body {
 		--tableHeaderWidthbestand: 22.9%;
 
 		/* Product Component */
-		--productFontSize:  30px;
+		--productHeaderFontSize:  15px;
+		--productTextFontSize: 10px;
 		/* --tabBackground: rgb(0, 111, 128); */
 	}
 	
@@ -115,10 +118,11 @@ body {
 		--tableminHeight: 30px;
 		--tableHeaderWidthId:  6.9%;
 		--tableHeaderWidthName: 39.5%;
-		--tableHeaderWidthbestand: 22.6%;
+		--tableHeaderWidthbestand: 22.5%;
 
 		/* Product Component */
-		--productFontSize:  20px;
+		--productHeaderFontSize:  22px;
+		--productTextFontSize: 13px;
 		/* --tabBackground: rgb(128, 0, 0); */
 	}
 	
@@ -142,7 +146,8 @@ body {
 
 
 		/* Product Component */
-		--productFontSize:  30px;
+		--productHeaderFontSize:  30px;
+		--productTextFontSize: 20px;
 		/* --tabBackground: rgb(28, 128, 0); */
 	}
 }
