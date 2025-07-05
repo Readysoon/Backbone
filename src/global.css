@@ -51,6 +51,16 @@ body {
 
 	/* --tabBackground: grey;  */
 
+	/* Header Scanlytics Section */
+	--scanlyticsLogoWidth: 70%;
+	--scanlyticsLogoHeight: 90%;
+	--scanlyticsTitleFontSize:38px;
+
+
+	/*  Skelet Section body Point  Section */
+
+	--bodyPointsTitleFontSize: 40px; 
+
 }
 /* Media Queries */
 /* Smart Phones */
@@ -76,6 +86,12 @@ body {
 		--productHeaderFontSize:  30px;
 		--productTextFontSize: 20px;
 		--productImageDeatilsGap: 8%;
+
+		/*  Skelet Section body Point  Section */
+
+	--bodyPointsTitleFontSize: 40px; 
+	--bodyplusFontSize: 40px
+
 	
 	}
 }
@@ -103,6 +119,17 @@ body {
 		--productTextFontSize: 11px;
 		--productImageDeatilsGap: 1%;
 		/* --tabBackground: rgb(0, 111, 128); */
+
+		/*  Header Scanlytics Section */
+		--scanlyticsLogoWidth: 55%;
+		--scanlyticsLogoHeight: 54%;
+		--scanlyticsTitleFontSize:20px;
+
+		/*  Skelet Section body Point  Section */
+
+	--bodyPointsTitleFontSize: 19px; 
+	--bodyplusFontSize: 27px
+
 	}
 	
 }
@@ -124,10 +151,22 @@ body {
 		--tableHeaderWidthbestand: 22.75%;
 
 		/* Product Component */
-		--productHeaderFontSize:  22px;
+		--productHeaderFontSize:  20px;
 		--productTextFontSize: 13px;
 		--productImageDeatilsGap: 2%;
 		/* --tabBackground: rgb(128, 0, 0); */
+
+			/*  Header Scanlytics Section */
+			--scanlyticsLogoWidth: 60%;
+			--scanlyticsLogoHeight: 59%;
+			--scanlyticsTitleFontSize:22px;
+
+
+			/*  Skelet Section body Point  Section */
+
+	--bodyPointsTitleFontSize: 20px; 
+	--bodyplusFontSize: 30px
+
 	}
 	
 }	
@@ -154,6 +193,18 @@ body {
 		--productTextFontSize: 19px;
 		--productImageDeatilsGap: 7%;
 		/* --tabBackground: rgb(28, 128, 0); */
+
+
+		/*  Header Scanlytics Section */
+		--scanlyticsLogoWidth: 56%;
+		--scanlyticsLogoHeight: 62%;
+		--scanlyticsTitleFontSize:31px;
+
+		/*  Skelet Section body Point  Section */
+
+		--bodyPointsTitleFontSize: 30px; 
+		--bodyplusFontSize: 40px
+
 	}
 }
 

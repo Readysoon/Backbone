@@ -36,9 +36,12 @@
 		</div>
 
 		<div class="HeadGoBackSection" on:click={handleReturnToProductList}>
-			<div class="arrowSecion">
-				<img src="leftArrow.png" alt="leftArrowIcon" class="leftArrowIcon" />
-			</div>
+			<!-- <div class="arrowSecion"> -->
+				<button class="arrowSecion">
+					<img src="leftArrow.png" alt="leftArrowIcon" class="leftArrowIcon" />
+				</button>
+			
+			<!-- </div> -->
 		</div>
 	</div>
 	<div class="productContentSection">
@@ -209,9 +212,9 @@
 	.arrowSecion {
 		width: 22%;
 		height: 60%;
-		/* background-color: #fff; */
+		background-color: rgb(30, 31, 30);
 		border-radius: 7px;
-		border: 1px solid white;
+		border: 2px solid rgba(255, 255, 255, 0.262);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -220,8 +223,9 @@
 	}
 
 	.arrowSecion:hover {
-		background-color: rgb(194, 31, 31);
-		border: 2px solid black;
+		/* background-color: rgb(194, 31, 31); */
+		background-color: rgba(249, 6, 6, 0.629);
+		border: none;
 	}
 
 	.leftArrowIcon {

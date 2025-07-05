@@ -59,10 +59,10 @@
 			<div class="navBarMenuHeader">
 				<div
 					class="NavBarSectionHead"
-					style="background-color: {menuToggle ? 'rgba(206, 86, 26, 0.988)' : '#000000a7'};"
+					style="background-color: {menuToggle ? ' rgba(249, 87, 6, 0.988)' : '#000000a7'};"
 					on:click={handleMenutToggle}
 				>
-					<img src="/logoww.png" alt="Logo" height="35" width="35" />
+					<img src="/logoww.png" alt="Logo" class="scanlyticsLogo" />
 				</div>
 				{#if menuToggle}
 					<div class="navBarMenuContent">
@@ -178,7 +178,8 @@
 	}
 
 	.NavBarSection:hover {
-		background-color: rgba(206, 86, 26, 0.988);
+		background-color: rgba(249, 87, 6, 0.988);
+		border: none;
 	}
 
 	.navBarMenu {
@@ -232,15 +233,27 @@
 		cursor: pointer;
 	}
 
+
 	.NavBarSectionHead:hover {
-		background-color: rgba(206, 86, 26, 0.988);
+		background-color: rgba(249, 87, 6, 0.988);
+		border: none;
+		
 	}
 
+	.scanlyticsLogo{
+		width: var(--scanlyticsLogoWidth);
+		height: var(--scanlyticsLogoHeight);
+	}
+
+	.scanlyticsLogo:hover{
+		width: var(--scanlyticsLogoWidth);
+		height: var(--scanlyticsLogoHeight);
+	}
 	.scanlyticsTitle {
 		position: relative;
 		left: -1%;
 		color: rgb(52, 51, 51);
-		font-size: 38px;
+		font-size: var(--scanlyticsTitleFontSize);
 	}
 	.signOutIcon {
 		width: 69%;
@@ -316,7 +329,7 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		font-size: 40px;
+		font-size: var(--bodyPointsTitleFontSize);
 		cursor: pointer;
 		color: black;
 	}
@@ -337,7 +350,7 @@
 		padding-left: 5%;
         display: flex;
         align-items: center;
-        font-size: 30px;
+        font-size: var(--bodyPointsTitleFontSize);
 	}
 
 	.shoulderTitle1dot1Icon {
@@ -349,7 +362,7 @@
 		/* background-color: orage; */
 		border-top-right-radius: 50px;
 		border-bottom-right-radius: 50px;
-		font-size: 40px;
+		font-size: var(	--bodyplusFontSize);
 		font-weight: 600;
 		border-left: 3px solid #2369f6dd;
 	}
@@ -420,7 +433,7 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		font-size: 40px;
+		font-size: var(--bodyPointsTitleFontSize);
 		cursor: pointer;
 		color: black;
 	}
