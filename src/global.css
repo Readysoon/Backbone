@@ -38,6 +38,10 @@ body {
 	--tableFont-Size: 19px;
 	--tableminHeight: 38px;
 
+	--tableHeaderWidthId:  6.9%;
+	--tableHeaderWidthName: 39.7%;
+	--tableHeaderWidthbestand: 22.8%;
+
 
 	/* Product Component */
 
@@ -75,6 +79,9 @@ body {
 		--tableHeaderFont-Size: 12px;
 		--tableFont-Size: 11px;
 		--tableminHeight: 25px;
+		--tableHeaderWidthId:  7%;
+		--tableHeaderWidthName: 40%;
+		--tableHeaderWidthbestand: 22.9%;
 		/* --tabBackground: rgb(0, 111, 128); */
 	}
 	
@@ -90,6 +97,9 @@ body {
 		--tableHeaderFont-Size: 13px;
 		--tableFont-Size: 12px;
 		--tableminHeight: 30px;
+		--tableHeaderWidthId:  6.9%;
+		--tableHeaderWidthName: 39.5%;
+		--tableHeaderWidthbestand: 22.75%;
 		/* --tabBackground: rgb(128, 0, 0); */
 	}
 	
@@ -105,6 +115,9 @@ body {
 		--tableHeaderFont-Size: 19px;
 		--tableFont-Size: 17px;
 		--tableminHeight: 43px;
+		--tableHeaderWidthName: 39.7%;
+		--tableHeaderWidthId:  6.9%;
+		--tableHeaderWidthbestand: 22.8%;
 		/* --tabBackground: rgb(28, 128, 0); */
 	}
 }

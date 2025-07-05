@@ -52,7 +52,16 @@
 			{:else}
 				{#each ProductData.productHeader as itemHead (itemHead)}
 					<div class="productHeadSection">
-						<div class="boxId">
+						<div class="boxId"
+						style="width: {selectedOptionState === 'Verfügbar'
+						? '7%'
+						: selectedOptionState === 'Nicht vorrätig'
+							? '7%'
+						: selectedOptionState === 'Warnung' 
+						&&'7%'
+					  }"
+						
+						>
 							{itemHead.IdHead}
 						</div>
 						<div
@@ -61,11 +70,23 @@
 								? '40%'
 								: selectedOptionState === 'Nicht vorrätig'
 									? '40%'
-									: '39.5%'}"
+								: selectedOptionState === 'Warnung' 
+								&& '40%'
+							  }"
 						>
 							{itemHead.NameHead}
 						</div>
-						<div class="boxBestand">
+						<div
+						 class="boxBestand"
+						style="width: {selectedOptionState === 'Verfügbar'
+						? '23%'
+						: selectedOptionState === 'Nicht vorrätig'
+							? '23%'
+						: selectedOptionState === 'Warnung' 
+						&& '23%'
+					   }"
+						>
+
 							{itemHead.StockHead}
 						</div>
 						<div class="boxStatus">
@@ -187,7 +208,7 @@
 	}
 
 	.boxId {
-		width: 7%;
+		width: var(--tableHeaderWidthId);
 		height: 100%;
 		display: flex;
 		justify-content: center;
@@ -200,7 +221,7 @@
 	}
 
 	.boxName {
-		width: 39.5%;
+		width: var(--tableHeaderWidthName);
 		height: 100%;
 		display: flex;
 		justify-content: center;
@@ -213,7 +234,7 @@
 	}
 
 	.boxBestand {
-		width: 23%;
+		width: var(--tableHeaderWidthbestand);
 		height: 100%;
 		display: flex;
 		justify-content: center;
@@ -318,4 +339,7 @@
 		height: 100%;
 		border-radius: 50px;
 	}
+
+
+
 </style>
