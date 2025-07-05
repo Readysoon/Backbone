@@ -45,6 +45,8 @@ body {
 
 	/* Product Component */
 
+	--productFontSize:  30px;
+
 	/* --tabBackground: grey;  */
 
 }
@@ -60,10 +62,17 @@ body {
 		--leftHeaderInput-hieight: 50%;
 		--leftHeaderSearchInput-fontSize: 22px;
 		/* --tableHeaderBackground: rgb(200, 45, 71);  */
+
+
+		/* Table Component */
 		--tableHeaderFont-Size: 19px;
 		--tableFont-Size: 19px;
 		--tableminHeight: 53px;
-		/* --tabBackground: green;  */
+
+
+		/* Product Component */
+		--productFontSize:  30px;
+	
 	}
 }
 
@@ -76,12 +85,17 @@ body {
 		--leftHeaderInput-hieight: 50%;
 		--tabBtn-fontSize: 13px;
 		/* --tableHeaderBackground: rgb(35, 172, 28);  */
+
+		/* Table Component */
 		--tableHeaderFont-Size: 12px;
 		--tableFont-Size: 11px;
 		--tableminHeight: 25px;
 		--tableHeaderWidthId:  6.9%;
-		--tableHeaderWidthName: 39.3%;
+		--tableHeaderWidthName: 39.5%;
 		--tableHeaderWidthbestand: 22.9%;
+
+		/* Product Component */
+		--productFontSize:  30px;
 		/* --tabBackground: rgb(0, 111, 128); */
 	}
 	
@@ -94,12 +108,17 @@ body {
 		--leftHeaderInput-hieight: 50%;
 		--tabBtn-fontSize: 14px;
 		/* --tableHeaderBackground: rgb(103, 88, 242);  */
+
+		/* Table Component */
 		--tableHeaderFont-Size: 13px;
 		--tableFont-Size: 12px;
 		--tableminHeight: 30px;
 		--tableHeaderWidthId:  6.9%;
 		--tableHeaderWidthName: 39.5%;
 		--tableHeaderWidthbestand: 22.75%;
+
+		/* Product Component */
+		--productFontSize:  30px;
 		/* --tabBackground: rgb(128, 0, 0); */
 	}
 	
@@ -112,12 +131,18 @@ body {
 		--leftHeaderInput-hieight: 50%;
 		--tabBtn-fontSize: 20px;
 		/* --tableHeaderBackground: rgb(227, 124, 21);  */
+
+		/* Table Component */
 		--tableHeaderFont-Size: 19px;
 		--tableFont-Size: 17px;
 		--tableminHeight: 43px;
 		--tableHeaderWidthName: 39.7%;
 		--tableHeaderWidthId:  6.9%;
 		--tableHeaderWidthbestand: 22.8%;
+
+
+		/* Product Component */
+		--productFontSize:  30px;
 		/* --tabBackground: rgb(28, 128, 0); */
 	}
 }
