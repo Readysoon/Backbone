@@ -47,6 +47,7 @@ body {
 
 	--productHeaderFontSize:  30px;
 	--productTextFontSize: 20px;
+	--productImageDeatilsGap: 8%;
 
 	/* --tabBackground: grey;  */
 
@@ -74,6 +75,7 @@ body {
 		/* Product Component */
 		--productHeaderFontSize:  30px;
 		--productTextFontSize: 20px;
+		--productImageDeatilsGap: 8%;
 	
 	}
 }
@@ -94,11 +96,12 @@ body {
 		--tableminHeight: 25px;
 		--tableHeaderWidthId:  6.9%;
 		--tableHeaderWidthName: 39.5%;
-		--tableHeaderWidthbestand: 22.9%;
+		--tableHeaderWidthbestand: 22.7%;
 
 		/* Product Component */
 		--productHeaderFontSize:  15px;
 		--productTextFontSize: 10px;
+		--productImageDeatilsGap: 1%;
 		/* --tabBackground: rgb(0, 111, 128); */
 	}
 	
@@ -118,11 +121,12 @@ body {
 		--tableminHeight: 30px;
 		--tableHeaderWidthId:  6.9%;
 		--tableHeaderWidthName: 39.5%;
-		--tableHeaderWidthbestand: 22.5%;
+		--tableHeaderWidthbestand: 22.75%;
 
 		/* Product Component */
 		--productHeaderFontSize:  22px;
 		--productTextFontSize: 13px;
+		--productImageDeatilsGap: 2%;
 		/* --tabBackground: rgb(128, 0, 0); */
 	}
 	
@@ -148,6 +152,7 @@ body {
 		/* Product Component */
 		--productHeaderFontSize:  30px;
 		--productTextFontSize: 20px;
+		--productImageDeatilsGap: 8%;
 		/* --tabBackground: rgb(28, 128, 0); */
 	}
 }

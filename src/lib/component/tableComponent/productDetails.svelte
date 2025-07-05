@@ -267,7 +267,7 @@
 		height: 30%;
 		/* background-color: rgb(243, 113, 113); */
 		display: flex;
-		gap: 8%;
+		gap: var(--productImageDeatilsGap);
 		/* padding: 1%; */
 
 		justify-content: space-around;
@@ -297,6 +297,7 @@
 	.productImage {
 		height: 60%;
 		width: 80%;
+		/* background-color: #fff; */
 		opacity: 0.9;
 	}
 
