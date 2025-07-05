@@ -26,13 +26,20 @@ body {
 
 :root{
 	/* --leftHeaderBackground: grey;  */
+
+	/* Right Header Component */
 	--Leftheader-height:  7%;
 	--leftHeaderInput-hieight: 50%;
-	--leftHeader-fontSize: 20px;
-	/* --tableHeaderBackground: pink;  */
+	/* Tab Component */
+	--tabBtn-fontSize: 20px;
+
+	/* Table Component */
 	--tableHeaderFont-Size: 19px;
 	--tableFont-Size: 19px;
 	--tableminHeight: 38px;
+
+
+	/* Product Component */
 
 	/* --tabBackground: grey;  */
 
@@ -44,7 +51,7 @@ body {
 /*  ipads (e.g. 1366px - 1440px wide) */
 @media (min-width: 768px) {
 	:root{
-		/* --leftHeaderBackground: rgb(222, 12, 250);  */
+		--leftHeaderBackground: rgb(222, 12, 250); 
 		--Leftheader-height:  7%;
 		--leftHeaderInput-hieight: 50%;
 		--leftHeaderSearchInput-fontSize: 22px;
@@ -63,7 +70,7 @@ body {
 		/* --leftHeaderBackground: rgb(230, 230, 230);  */
 		--Leftheader-height:  7%;
 		--leftHeaderInput-hieight: 50%;
-		--leftHeader-fontSize: 13px;
+		--tabBtn-fontSize: 13px;
 		/* --tableHeaderBackground: rgb(35, 172, 28);  */
 		--tableHeaderFont-Size: 12px;
 		--tableFont-Size: 11px;
@@ -78,7 +85,7 @@ body {
 		/* --leftHeaderBackground: rgb(216, 117, 18);  */
 		--Leftheader-height:  7%;
 		--leftHeaderInput-hieight: 50%;
-		--leftHeader-fontSize: 14px;
+		--tabBtn-fontSize: 14px;
 		/* --tableHeaderBackground: rgb(103, 88, 242);  */
 		--tableHeaderFont-Size: 13px;
 		--tableFont-Size: 12px;
@@ -93,7 +100,7 @@ body {
 		/* --leftHeaderBackground: rgb(31, 250, 170);  */
 		--Leftheader-height:  7%;
 		--leftHeaderInput-hieight: 50%;
-		--leftHeader-fontSize: 20px;
+		--tabBtn-fontSize: 20px;
 		/* --tableHeaderBackground: rgb(227, 124, 21);  */
 		--tableHeaderFont-Size: 19px;
 		--tableFont-Size: 17px;

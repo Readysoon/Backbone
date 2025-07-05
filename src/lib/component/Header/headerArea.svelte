@@ -84,7 +84,7 @@
 		display: flex;
 		border-radius: 50px;
 		padding-left: 3%;
-		font-size: var(--leftHeader-fontSize);
+		font-size: var(--tabBtn-fontSize);
 	}
 	.headerMarkContent {
 		/* background-color: pink; */
@@ -105,7 +105,7 @@
 		display: flex;
 		align-items: center;
 		color: white;
-		font-size: var(--leftHeader-fontSize);
+		font-size: var(--tabBtn-fontSize);
 		border-radius: 7px;
 		border: 2px solid #33333332;
 		box-shadow: 0 0.5px 12px -4px white;
@@ -134,7 +134,7 @@
 		border-radius: 7px;
 		color: white;
 		padding-left: 5%;
-		font-size: var(--leftHeader-fontSize);;
+		font-size: var(--tabBtn-fontSize);;
 		border: 2px solid #33333332;
 		box-shadow: 0 0.5px 12px -4px white;
 		cursor: pointer;

@@ -72,7 +72,7 @@ border:{selectedOptionState == 'Warnung' ? '2px solid #004cff8f;' : ' 2px solid 
 		color: white;
 		cursor: pointer;
 
-		font-size: var(--leftHeader-fontSize);
+		font-size: var(--tabBtn-fontSize);
 	}
 
 /*     
