@@ -51,7 +51,7 @@ body {
 /*  ipads (e.g. 1366px - 1440px wide) */
 @media (min-width: 768px) {
 	:root{
-		--leftHeaderBackground: rgb(222, 12, 250); 
+		/* --leftHeaderBackground: rgb(222, 12, 250);  */
 		--Leftheader-height:  7%;
 		--leftHeaderInput-hieight: 50%;
 		--leftHeaderSearchInput-fontSize: 22px;
