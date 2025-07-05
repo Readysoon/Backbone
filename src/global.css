@@ -115,10 +115,10 @@ body {
 		--tableminHeight: 30px;
 		--tableHeaderWidthId:  6.9%;
 		--tableHeaderWidthName: 39.5%;
-		--tableHeaderWidthbestand: 22.75%;
+		--tableHeaderWidthbestand: 22.6%;
 
 		/* Product Component */
-		--productFontSize:  30px;
+		--productFontSize:  20px;
 		/* --tabBackground: rgb(128, 0, 0); */
 	}
 	

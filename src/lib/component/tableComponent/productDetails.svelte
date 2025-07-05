@@ -189,7 +189,7 @@
 		padding-left: 2%;
 		display: flex;
 		align-items: center;
-		font-size: 30px;
+		font-size: var(--productFontSize);
 		color: white;
 	}
 
