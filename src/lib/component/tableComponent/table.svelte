@@ -195,13 +195,13 @@
 		border-radius: 8px;
 	}
 	.productContentSection::-webkit-scrollbar-thumb {
-		background: linear-gradient(120deg, #444 40%, #2369f6dd 100%);
+		background: linear-gradient(120deg, #444 40%);
 		border-radius: 8px;
 		min-height: 40px;
 		transition: background 0.3s;
 	}
 	.productContentSection::-webkit-scrollbar-thumb:hover {
-		background: linear-gradient(120deg, #2369f6dd 40%, #444 100%);
+		background: linear-gradient(120deg #444 100%);
 	}
 	.productContentSection::-webkit-scrollbar-corner {
 		background: #232323;

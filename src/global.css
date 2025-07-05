@@ -95,8 +95,8 @@ body {
 		--tableFont-Size: 11px;
 		--tableminHeight: 25px;
 		--tableHeaderWidthId:  6.9%;
-		--tableHeaderWidthName: 39.5%;
-		--tableHeaderWidthbestand: 22.7%;
+		--tableHeaderWidthName: 39.3%;
+		--tableHeaderWidthbestand: 22.68%;
 
 		/* Product Component */
 		--productHeaderFontSize:  16px;
@@ -150,9 +150,9 @@ body {
 
 
 		/* Product Component */
-		--productHeaderFontSize:  30px;
-		--productTextFontSize: 20px;
-		--productImageDeatilsGap: 8%;
+		--productHeaderFontSize:  28px;
+		--productTextFontSize: 19px;
+		--productImageDeatilsGap: 7%;
 		/* --tabBackground: rgb(28, 128, 0); */
 	}
 }
