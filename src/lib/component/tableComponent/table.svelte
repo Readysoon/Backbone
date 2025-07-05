@@ -37,6 +37,9 @@
 	});
 </script>
 
+<div class="listArea">
+
+
 <div class="listContectSection">
 	{#if ProductData}
 		{#if selectedItem != null}
@@ -104,8 +107,18 @@
 		{/if}
 	{/if}
 </div>
+</div>
 
 <style>
+	.listArea {
+	/* background-color: black; */
+	width: 100%;
+	height: 85%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* border: 1px solid #acacae; */
+}
 	.listContectSection {
 		width: 97%;
 		height: 100%;
