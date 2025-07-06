@@ -46,7 +46,7 @@
 	
 		{#if isMobile}
 			<div class="mobilePage">
-				<p>Unfortunately, the app is not available on this screen size. Please switch to a different device and try again later.</p>
+				<p>Unfortunately, the app is not available on this screen size. Please switch to a different device.</p>
 			</div>
 		{:else}
 		<main>
