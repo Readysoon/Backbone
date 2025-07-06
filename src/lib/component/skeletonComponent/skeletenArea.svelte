@@ -8,6 +8,8 @@
 
 	let completSkelet = $state(true);
 	let leftArmSkelet = $state(false);
+	let aibotSection = $state(false);
+
 
 	const handleMenutToggle = () => {
 		menuToggle = !menuToggle;
@@ -23,6 +25,10 @@
         completSkelet = true;
 		
     } 
+
+	const handleAiToggle = () => {
+		aibotSection = !aibotSection
+	}
 
 	$effect(() => {
 		const handleCallBruno = () => {
@@ -74,7 +80,9 @@
 							<img src="edit1.png" alt="editIcon" class="editIcon" />
 						</div>
 
-						<div class="NavBarSection">
+						<div class="NavBarSection"
+						style="background-color: {aibotSection ? ' rgba(249, 87, 6, 0.988)' : '#000000a7'};" 
+						on:click={handleAiToggle}>
 							<img src="robo.png" alt="emailIcon" class="roboIcon" />
 						</div>
 						<div class="NavBarSection">
@@ -83,9 +91,15 @@
 					</div>
 				{/if}
 
-				<!-- <div class="navBarMenuContentAI">
-						AI
-				</div> -->
+
+				{#if aibotSection}
+				<div class="navBarMenuContentAI">
+					<div class="aiVisualizer">
+						<!-- 1 -->
+					</div>
+			</div>
+				{/if}
+				
 			</div>
 		</div>
 		<div class="scanlyticsTitle">
@@ -223,6 +237,27 @@
 		flex-direction: column;
 		/* background-color: rgb(187, 202, 21); */
 		z-index: 5;
+	}
+
+	.navBarMenuContentAI{
+		position: absolute;
+		top: 940%;
+		width: 100%;
+		height: 500%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-direction: column;
+		/* background-color: rgb(187, 202, 21); */
+		z-index: 5;
+	}
+
+	.aiVisualizer{
+		width: 71%;
+		height: 90%;
+		/* background: rgba(31, 30, 30, 0.755); */
+		background-color: #000000a7;
+		border-radius: 50px;
 	}
 
 	.NavBarSectionHead {
