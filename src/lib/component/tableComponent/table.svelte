@@ -19,8 +19,7 @@
 	let UpdatePage = $state(false);
 	let inventarData = $state(ProductData);
 
-
-	const handleselectedObj = (itemObj: any) => {;
+	const handleselectedObj = (itemObj: any) => {
 		selectedItem = selectedItem == itemObj ? null : itemObj;
 	};
 
@@ -32,7 +31,6 @@
 
 	// Handles object delete feature from the table of product content
 	const handledeleteObj = (eventId: any) => {
-		
 		let filterdProductData = inventarData.productContent.filter((item) => item.Id != eventId);
 
 		inventarData = {
@@ -118,17 +116,15 @@
 									? () => handledeleteObj(itemContent.Id)
 									: () => handleselectedObj(itemContent)}
 							>
-
-									{#if editMode}
+								{#if editMode}
 									<div class="contentId">
 										<img src="minus.png" alt="minusIcon" class="minusIcon" />
 									</div>
-									{:else}
+								{:else}
 									<div class="contentId">
 										{itemContent.Id}
 									</div>
-									{/if}
-								
+								{/if}
 
 								<div class="contentName">
 									{itemContent.name}
@@ -307,13 +303,21 @@
 
 	.boxContentObj:hover {
 		background-color: #2369f652;
-		border: 2px solid #004cff8f;
+		/* border: 2px solid #004cff8f; */
+		border-left: none;
+		border-right: none;
+		border-top:  2px solid  #004cff8f;
+		border-bottom:  2px solid #004cff8f;
 		cursor: pointer;
 	}
 
 	.boxContentObj.editModeStyle:hover {
 		background-color: #f6233152;
-		border: 2px solid #ff00008f;
+		/* border: 2px solid #ff00008f; */
+		border-left: none;
+		border-right: none;
+		border-top:  2px solid #ff00008f;
+		border-bottom:  2px solid #ff00008f;
 		cursor: pointer;
 	}
 
@@ -328,9 +332,10 @@
 		font-size: var(--tableFont-Size);
 	}
 
-	.minusIcon{
+	.minusIcon {
 		width: 60%;
-		height: 100%;
+		height: 80%;
+		/* background-color: #fff; */
 	}
 
 	.contentName {
