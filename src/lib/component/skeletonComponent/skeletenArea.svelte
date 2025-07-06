@@ -28,6 +28,7 @@
 
 	const handleAiToggle = () => {
 		aibotSection = !aibotSection
+		menuToggle = false
 	}
 
 	$effect(() => {
@@ -68,7 +69,12 @@
 					style="background-color: {menuToggle ? ' rgba(249, 87, 6, 0.988)' : '#000000a7'};"
 					on:click={handleMenutToggle}
 				>
-					<img src="/logoww.png" alt="Logo" class="scanlyticsLogo" />
+					<!-- <img src="/logoww.png" alt="Logo" class="scanlyticsLogo" /> -->
+					{#if aibotSection}
+						<img src="robo.png" alt="emailIcon" class="roboIcon" />
+						{:else}
+						<img src="/logoww.png" alt="Logo" class="scanlyticsLogo" />
+					{/if}
 				</div>
 				{#if menuToggle}
 					<div class="navBarMenuContent">
