@@ -2,13 +2,15 @@
 	let menuToggle = $state(true);
 	import { Application } from '@splinetool/runtime';
 	import skelletsvgIcon from '../../../../static/svgIcons/skelCompl.svg';
+	import { handleEditOption } from '../tableComponent/table.svelte';
 
 	let loading: boolean = true;
 	let canvas: any;
 
 	let completSkelet = $state(true);
 	let leftArmSkelet = $state(false);
-	let aibotSection = $state(false);
+	let aibotSectionToggle = $state(false);
+	let editToggle = $state(false);
 
 	const handleMenutToggle = () => {
 		menuToggle = !menuToggle;
@@ -25,9 +27,15 @@
 	};
 
 	const handleAiToggle = () => {
-		aibotSection = !aibotSection;
+		aibotSectionToggle = !aibotSectionToggle;
 		menuToggle = false;
 	};
+
+
+	const handleEditMode= () => { 
+		editToggle = !editToggle
+		handleEditOption()
+	}
 
 	$effect(() => {
 		const handleCallBruno = () => {
@@ -68,8 +76,8 @@
 					on:click={handleMenutToggle}
 				>
 					<!-- <img src="/logoww.png" alt="Logo" class="scanlyticsLogo" /> -->
-					{#if aibotSection}
-						<img src="robo.png" alt="emailIcon" class="roboIcon" />
+					{#if aibotSectionToggle}
+						<img src="robo.png" alt="roboIcon" class="roboIcon" />
 					{:else}
 						<img src="/logoww.png" alt="Logo" class="scanlyticsLogo" />
 					{/if}
@@ -80,13 +88,15 @@
 							<img src="plus1.png" alt="plusIcon" class="plusIcon" />
 						</div>
 
-						<div class="NavBarSection">
+						<div class="NavBarSection" 
+						style="background-color: {editToggle ? ' rgba(249, 87, 6, 0.988)' : '#000000a7'};"
+						on:click={handleEditMode}>
 							<img src="edit1.png" alt="editIcon" class="editIcon" />
 						</div>
 
 						<div
 							class="NavBarSection"
-							style="background-color: {aibotSection ? ' rgba(249, 87, 6, 0.988)' : '#000000a7'};"
+							style="background-color: {aibotSectionToggle ? ' rgba(249, 87, 6, 0.988)' : '#000000a7'};"
 							on:click={handleAiToggle}
 						>
 							<img src="robo.png" alt="emailIcon" class="roboIcon" />
@@ -97,7 +107,7 @@
 					</div>
 				{/if}
 
-				{#if aibotSection}
+				{#if aibotSectionToggle}
 					<!-- <div class="navBarMenuContentAI">
 						<div class="aiVisualizer">
 							

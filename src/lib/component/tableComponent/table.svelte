@@ -1,4 +1,10 @@
 <script lang="ts" module>
+	let editMode = $state(false);
+
+	// Enables the table to react towards the edit toggle from the menu component
+	export function handleEditOption() {
+		editMode = !editMode;
+	}
 </script>
 
 <script lang="ts">
@@ -10,9 +16,11 @@
 	let selectedItem: any = $state(null);
 	let LoadPage = $state(false);
 
-	const handleselectedObj = (itemObj: any) => {
-		console.log('itemObj', itemObj);
+	let UpdatePage = $state(false);
+	let inventarData = $state(ProductData);
 
+
+	const handleselectedObj = (itemObj: any) => {;
 		selectedItem = selectedItem == itemObj ? null : itemObj;
 	};
 
@@ -20,6 +28,17 @@
 		console.log('clickedReturnBack');
 		selectedItem = null;
 		LoadPage = false;
+	};
+
+	// Handles object delete feature from the table of product content
+	const handledeleteObj = (eventId: any) => {
+		
+		let filterdProductData = inventarData.productContent.filter((item) => item.Id != eventId);
+
+		inventarData = {
+			...inventarData,
+			productContent: filterdProductData
+		};
 	};
 
 	$effect(() => {
@@ -30,6 +49,8 @@
 			}, 2700);
 		};
 
+		const handleUpdateInventarArr = () => {};
+
 		if (!LoadPage) {
 			handleLoadPage();
 		}
@@ -38,7 +59,7 @@
 
 <div class="listArea">
 	<div class="listContectSection">
-		{#if ProductData}
+		{#if inventarData}
 			{#if selectedItem != null}
 				{#if LoadPage}
 					<div class="ProductDetails">
@@ -50,17 +71,16 @@
 					</div>
 				{/if}
 			{:else}
-				{#each ProductData.productHeader as itemHead (itemHead)}
+				<!-- Header Section -->
+				{#each inventarData.productHeader as itemHead (itemHead)}
 					<div class="productHeadSection">
-						<div class="boxId"
-						style="width: {selectedOptionState === 'Verfügbar'
-						? '7%'
-						: selectedOptionState === 'Nicht vorrätig'
-							? '7%'
-						: selectedOptionState === 'Warnung' 
-						&&'7%'
-					  }"
-						
+						<div
+							class="boxId"
+							style="width: {selectedOptionState === 'Verfügbar'
+								? '7%'
+								: selectedOptionState === 'Nicht vorrätig'
+									? '7%'
+									: selectedOptionState === 'Warnung' && '7%'}"
 						>
 							{itemHead.IdHead}
 						</div>
@@ -70,23 +90,18 @@
 								? '40%'
 								: selectedOptionState === 'Nicht vorrätig'
 									? '40%'
-								: selectedOptionState === 'Warnung' 
-								&& '40%'
-							  }"
+									: selectedOptionState === 'Warnung' && '40%'}"
 						>
 							{itemHead.NameHead}
 						</div>
 						<div
-						 class="boxBestand"
-						style="width: {selectedOptionState === 'Verfügbar'
-						? '23%'
-						: selectedOptionState === 'Nicht vorrätig'
-							? '23%'
-						: selectedOptionState === 'Warnung' 
-						&& '23%'
-					   }"
+							class="boxBestand"
+							style="width: {selectedOptionState === 'Verfügbar'
+								? '23%'
+								: selectedOptionState === 'Nicht vorrätig'
+									? '23%'
+									: selectedOptionState === 'Warnung' && '23%'}"
 						>
-
 							{itemHead.StockHead}
 						</div>
 						<div class="boxStatus">
@@ -95,11 +110,25 @@
 					</div>
 
 					<div class="productContentSection">
-						{#each ProductData.productContent.filter( (item: any) => (selectedOptionState == 'Gesamt' ? item.productzustand != selectedOptionState : item.productzustand == selectedOptionState) ) as itemContent (itemContent)}
-							<div class="boxContentObj" on:click={() => handleselectedObj(itemContent)}>
-								<div class="contentId">
-									{itemContent.Id}
-								</div>
+						{#each inventarData.productContent.filter( (item: any) => (selectedOptionState == 'Gesamt' ? item.productzustand != selectedOptionState : item.productzustand == selectedOptionState) ) as itemContent (itemContent)}
+							<div
+								class="boxContentObj"
+								class:editModeStyle={editMode}
+								on:click={editMode
+									? () => handledeleteObj(itemContent.Id)
+									: () => handleselectedObj(itemContent)}
+							>
+
+									{#if editMode}
+									<div class="contentId">
+										<img src="minus.png" alt="minusIcon" class="minusIcon" />
+									</div>
+									{:else}
+									<div class="contentId">
+										{itemContent.Id}
+									</div>
+									{/if}
+								
 
 								<div class="contentName">
 									{itemContent.name}
@@ -282,6 +311,12 @@
 		cursor: pointer;
 	}
 
+	.boxContentObj.editModeStyle:hover {
+		background-color: #f6233152;
+		border: 2px solid #ff00008f;
+		cursor: pointer;
+	}
+
 	.contentId {
 		width: 7%;
 		height: 100%;
@@ -291,6 +326,11 @@
 		border-right: 1px solid rgba(255, 255, 255, 0.397);
 		color: white;
 		font-size: var(--tableFont-Size);
+	}
+
+	.minusIcon{
+		width: 60%;
+		height: 100%;
 	}
 
 	.contentName {
@@ -339,7 +379,4 @@
 		height: 100%;
 		border-radius: 50px;
 	}
-
-
-
 </style>
