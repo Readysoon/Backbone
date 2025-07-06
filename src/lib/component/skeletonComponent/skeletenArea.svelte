@@ -385,8 +385,8 @@
 
 	.red-dot1 {
 		position: absolute;
-		left: 35%; /* Adjust to match head position */
-		top: 38%; /* Adjust to match head position */
+		left: var(--bodyPin2LeftPosition); /* Adjust to match head position */
+		top: var(--bodyPin2TopPostion); /* Adjust to match head position */
 		width: 5%;
 		height: 4%;
 		background: rgba(255, 0, 0, 0.59);
@@ -401,8 +401,8 @@
 
 	.red-dot2 {
 		position: absolute;
-		left: 30%; /* Adjust to match head position */
-		top: 49%; /* Adjust to match head position */
+		left: var(--bodyPin3LeftPosition); /* Adjust to match head position */
+		top: var(--bodyPin3TopPostion); /* Adjust to match head position */
 		width: 5%;
 		height: 4%;
 		background: rgba(255, 0, 0, 0.59);

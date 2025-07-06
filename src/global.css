@@ -59,6 +59,9 @@ body {
 
 	--bodyPointsTitleFontSize: 40px;
 	--bodyplusFontSize: 40px;
+	--bodyPin1LeftPosition: 37%;
+	--bodyPin1TopPostion: 25%;
+
 }
 
 
@@ -91,6 +94,8 @@ body {
 		--bodyplusFontSize: 40px;
 		--bodyPin1LeftPosition: -1%;
 		--bodyPin1TopPostion: 20%;
+		--bodyPin2LeftPosition: 37%;
+		--bodyPin2TopPostion: 25%
 	}
 }
 
@@ -128,6 +133,10 @@ body {
 		--bodyplusFontSize: 27px;
 		--bodyPin1LeftPosition: 35%;
 		--bodyPin1TopPostion: 25%;
+		--bodyPin2LeftPosition: 33.5%;
+		--bodyPin2TopPostion: 38%;
+		--bodyPin3LeftPosition: 28.5%;
+		--bodyPin3TopPostion: 49%
 	}
 }
 /* L - Size Screen - Mid laptops (your 1807px screen) */
@@ -164,6 +173,10 @@ body {
 		--bodyplusFontSize: 30px;
 		--bodyPin1LeftPosition: 37%;
 		--bodyPin1TopPostion: 25%;
+		--bodyPin2LeftPosition: 36%;
+		--bodyPin2TopPostion: 38%;
+		--bodyPin3LeftPosition: 31.5%;
+		--bodyPin3TopPostion: 49%
 	}
 }
 
@@ -199,8 +212,12 @@ body {
 
 		--bodyPointsTitleFontSize: 20px;
 		--bodyplusFontSize: 30px;
-		--bodyPin1LeftPosition: 37%;
+		--bodyPin1LeftPosition: 38%;
 		--bodyPin1TopPostion: 25%;
+		--bodyPin2LeftPosition: 36.5%;
+		--bodyPin2TopPostion: 38.5%;
+		--bodyPin3LeftPosition: 33%;
+		--bodyPin3TopPostion: 49%
 	}
 }
 
@@ -239,6 +256,11 @@ body {
 		--bodyplusFontSize: 40px;
 		--bodyPin1LeftPosition: 37%;
 		--bodyPin1TopPostion: 25%;
+		--bodyPin2LeftPosition: 35.5%;
+		--bodyPin2TopPostion: 38%;
+		--bodyPin3LeftPosition: 31%;
+		--bodyPin3TopPostion: 49%
+		
 	}
 }
 
