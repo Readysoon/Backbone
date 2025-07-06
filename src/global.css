@@ -60,11 +60,13 @@ body {
 	--bodyPointsTitleFontSize: 40px;
 	--bodyplusFontSize: 40px;
 }
+
+
 /* Media Queries */
-/* Smart Phones */
+/* XS - Size Screen - Smart Phones  */
 @media (min-width: 320px) and (max-width: 460px) {
 }
-/*  ipads (e.g. 1366px - 1440px wide) */
+/* S - Size Screen - ipads (e.g. 1366px - 1440px wide) */
 @media (min-width: 768px) {
 	:root {
 		/* --leftHeaderBackground: rgb(222, 12, 250);  */
@@ -92,7 +94,7 @@ body {
 	}
 }
 
-/* Small laptops (e.g. 1366px - 1440px wide) */
+/* M - Size Screen (e.g. 1366px - 1440px wide - small laptops) */
 @media (min-width: 1280px) {
 	:root {
 		/* --leftHeaderBackground: rgb(230, 230, 230);  */
@@ -128,7 +130,7 @@ body {
 		--bodyPin1TopPostion: 25%;
 	}
 }
-/* Mid laptops (your 1807px screen) */
+/* L - Size Screen - Mid laptops (your 1807px screen) */
 @media (min-width: 1700px) {
 	:root {
 		/* --leftHeaderBackground: rgb(216, 117, 18);  */
@@ -165,7 +167,7 @@ body {
 	}
 }
 
-/* Between Middle  laptops (your 1807px screen) */
+/* XL - Size Screen - Between Middle  laptops (your 1807px screen) */
 @media (min-width: 1900px) {
 	:root {
 		/* --leftHeaderBackground: rgb(216, 117, 18);  */
@@ -203,7 +205,7 @@ body {
 }
 
 
-/* Large Screen */
+/*  XXL - Size Screen - Large Screen */
 @media (min-width: 2560px) {
 	:root {
 		/* --leftHeaderBackground: rgb(31, 250, 170);  */
