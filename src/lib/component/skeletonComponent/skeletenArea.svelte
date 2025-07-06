@@ -125,11 +125,11 @@
 			<div class="skeletShoulder">
 				<img src="/svgIcons/Arm.svg" alt="skseltImage" class="skeletShoulderIcon" />
 				<div class="red-dot-shoulder1">
-					<div class="shoulderTitle1dot1">Left Arm Shoulder</div>
+					<div class="shoulderTitle1dot1">Shoulder</div>
 					<div class="shoulderTitle1dot1Icon">+</div>
 				</div>
 				<div class="red-dot-shoulder2">
-					<div class="shoulderTitle1dot1">Left Under Arm Shoulder</div>
+					<div class="shoulderTitle1dot1">forarm</div>
 					<div class="shoulderTitle1dot1Icon">+</div>
 				</div>
                 <div class="goBackShoulderPoll" on:click={handleGoBack}>
