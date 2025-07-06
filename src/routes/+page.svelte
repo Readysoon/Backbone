@@ -7,7 +7,7 @@
 	//   import * as productJson from '../../static/product.json';
 	import Table from '$lib/component/tableComponent/table.svelte';
 	import Tab from '$lib/component/TabOption/tab.svelte';
-	import { Circle2 } from 'svelte-loading-spinners';
+	import { RingLoader } from 'svelte-loading-spinners';
 	let selectedOptionState = $state('Gesamt');
 	let isMobile = $state(false);
 	let loadingPage = $state(true);
@@ -19,9 +19,8 @@
 	$effect(() => {
 		const handleDeviceCheck = () => {
 			loadingPage = false;
-			console.log('innerwidth device check', innerWidth);
 			if (innerWidth <= 1400) {
-				console.log('inner with is smaller');
+			
 				isMobile = true;
 			} else {
 				isMobile = false;
@@ -40,7 +39,8 @@
 
 {#if loadingPage}
 	<div class="laodingPageSection">
-		<Circle2 size="150" colorOuter="blue" unit="px" durationInner="1s" />
+		<RingLoader size="100" color="orange" unit="px" duration="1s" />
+		
 	</div>
 {:else}
 	
@@ -89,9 +89,12 @@
 		display: flex;
 		background-color: rgba(0, 0, 0, 0.097);
 		/* color: rgb(15, 14, 14); */
+		color: white;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		gap: 4%;
 	}
 	.mobilePage {
 		width: 100%;
