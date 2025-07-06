@@ -24,11 +24,11 @@ body {
 	background-color: rgb(0, 0, 0);
 }
 
-:root{
+:root {
 	/* --leftHeaderBackground: grey;  */
 
 	/* Right Header Component */
-	--Leftheader-height:  7%;
+	--Leftheader-height: 7%;
 	--leftHeaderInput-hieight: 50%;
 	/* Tab Component */
 	--tabBtn-fontSize: 20px;
@@ -38,14 +38,13 @@ body {
 	--tableFont-Size: 19px;
 	--tableminHeight: 38px;
 
-	--tableHeaderWidthId:  6.9%;
+	--tableHeaderWidthId: 6.9%;
 	--tableHeaderWidthName: 39.7%;
 	--tableHeaderWidthbestand: 22.8%;
 
-
 	/* Product Component */
 
-	--productHeaderFontSize:  30px;
+	--productHeaderFontSize: 30px;
 	--productTextFontSize: 20px;
 	--productImageDeatilsGap: 8%;
 
@@ -54,14 +53,12 @@ body {
 	/* Header Scanlytics Section */
 	--scanlyticsLogoWidth: 70%;
 	--scanlyticsLogoHeight: 90%;
-	--scanlyticsTitleFontSize:38px;
-
+	--scanlyticsTitleFontSize: 38px;
 
 	/*  Skelet Section body Point  Section */
 
-	--bodyPointsTitleFontSize: 40px; 
-	--bodyplusFontSize: 40px
-
+	--bodyPointsTitleFontSize: 40px;
+	--bodyplusFontSize: 40px;
 }
 /* Media Queries */
 /* Smart Phones */
@@ -69,43 +66,37 @@ body {
 }
 /*  ipads (e.g. 1366px - 1440px wide) */
 @media (min-width: 768px) {
-	:root{
+	:root {
 		/* --leftHeaderBackground: rgb(222, 12, 250);  */
-		--Leftheader-height:  7%;
+		--Leftheader-height: 7%;
 		--leftHeaderInput-hieight: 50%;
 		--leftHeaderSearchInput-fontSize: 22px;
 		/* --tableHeaderBackground: rgb(200, 45, 71);  */
-
 
 		/* Table Component */
 		--tableHeaderFont-Size: 19px;
 		--tableFont-Size: 19px;
 		--tableminHeight: 53px;
 
-
 		/* Product Component */
-		--productHeaderFontSize:  30px;
+		--productHeaderFontSize: 30px;
 		--productTextFontSize: 20px;
 		--productImageDeatilsGap: 8%;
 
 		/*  Skelet Section body Point  Section */
 
-	--bodyPointsTitleFontSize: 40px; 
-	--bodyplusFontSize: 40px;
-	--bodyPin1LeftPosition: -1%; 
-	--bodyPin1TopPostion: 20%;
-
-
-	
+		--bodyPointsTitleFontSize: 40px;
+		--bodyplusFontSize: 40px;
+		--bodyPin1LeftPosition: -1%;
+		--bodyPin1TopPostion: 20%;
 	}
 }
 
-
 /* Small laptops (e.g. 1366px - 1440px wide) */
 @media (min-width: 1280px) {
-	:root{
+	:root {
 		/* --leftHeaderBackground: rgb(230, 230, 230);  */
-		--Leftheader-height:  7%;
+		--Leftheader-height: 7%;
 		--leftHeaderInput-hieight: 50%;
 		--tabBtn-fontSize: 13px;
 		/* --tableHeaderBackground: rgb(35, 172, 28);  */
@@ -114,12 +105,12 @@ body {
 		--tableHeaderFont-Size: 12px;
 		--tableFont-Size: 11px;
 		--tableminHeight: 25px;
-		--tableHeaderWidthId:  6.9%;
+		--tableHeaderWidthId: 6.9%;
 		--tableHeaderWidthName: 39.4%;
 		--tableHeaderWidthbestand: 22.69%;
 
 		/* Product Component */
-		--productHeaderFontSize:  16px;
+		--productHeaderFontSize: 16px;
 		--productTextFontSize: 11px;
 		--productImageDeatilsGap: 1%;
 		/* --tabBackground: rgb(0, 111, 128); */
@@ -127,23 +118,21 @@ body {
 		/*  Header Scanlytics Section */
 		--scanlyticsLogoWidth: 55%;
 		--scanlyticsLogoHeight: 54%;
-		--scanlyticsTitleFontSize:20px;
+		--scanlyticsTitleFontSize: 20px;
 
 		/*  Skelet Section body Point  Section */
 
-	--bodyPointsTitleFontSize: 19px; 
-	--bodyplusFontSize: 27px;
-	--bodyPin1LeftPosition: 35%; 
-	--bodyPin1TopPostion: 25%;
-
+		--bodyPointsTitleFontSize: 19px;
+		--bodyplusFontSize: 27px;
+		--bodyPin1LeftPosition: 35%;
+		--bodyPin1TopPostion: 25%;
 	}
-	
 }
 /* Mid laptops (your 1807px screen) */
 @media (min-width: 1700px) {
-	:root{
+	:root {
 		/* --leftHeaderBackground: rgb(216, 117, 18);  */
-		--Leftheader-height:  7%;
+		--Leftheader-height: 7%;
 		--leftHeaderInput-hieight: 50%;
 		--tabBtn-fontSize: 14px;
 		/* --tableHeaderBackground: rgb(103, 88, 242);  */
@@ -152,36 +141,73 @@ body {
 		--tableHeaderFont-Size: 13px;
 		--tableFont-Size: 12px;
 		--tableminHeight: 30px;
-		--tableHeaderWidthId:  6.9%;
+		--tableHeaderWidthId: 6.9%;
 		--tableHeaderWidthName: 39.5%;
 		--tableHeaderWidthbestand: 22.75%;
 
 		/* Product Component */
-		--productHeaderFontSize:  20px;
+		--productHeaderFontSize: 20px;
 		--productTextFontSize: 13px;
 		--productImageDeatilsGap: 2%;
 		/* --tabBackground: rgb(128, 0, 0); */
 
-			/*  Header Scanlytics Section */
-			--scanlyticsLogoWidth: 60%;
-			--scanlyticsLogoHeight: 59%;
-			--scanlyticsTitleFontSize:22px;
+		/*  Header Scanlytics Section */
+		--scanlyticsLogoWidth: 60%;
+		--scanlyticsLogoHeight: 59%;
+		--scanlyticsTitleFontSize: 22px;
 
+		/*  Skelet Section body Point  Section */
 
-			/*  Skelet Section body Point  Section */
-
-	--bodyPointsTitleFontSize: 20px; 
-	--bodyplusFontSize: 30px;
-	--bodyPin1LeftPosition: 37%; 
+		--bodyPointsTitleFontSize: 20px;
+		--bodyplusFontSize: 30px;
+		--bodyPin1LeftPosition: 37%;
 		--bodyPin1TopPostion: 25%;
 	}
-	
-}	
+}
+
+/* Between Middle  laptops (your 1807px screen) */
+@media (min-width: 1900px) {
+	:root {
+		/* --leftHeaderBackground: rgb(216, 117, 18);  */
+		--Leftheader-height: 7%;
+		--leftHeaderInput-hieight: 50%;
+		--tabBtn-fontSize: 15px;
+		/* --tableHeaderBackground: rgb(103, 88, 242);  */
+
+		/* Table Component */
+		--tableHeaderFont-Size: 16px;
+		--tableFont-Size: 14px;
+		--tableminHeight: 35px;
+		--tableHeaderWidthId: 6.9%;
+		--tableHeaderWidthName: 39.5%;
+		--tableHeaderWidthbestand: 22.8%;
+
+		/* Product Component */
+		--productHeaderFontSize: 23px;
+		--productTextFontSize: 15px;
+		--productImageDeatilsGap: 2%;
+		/* --tabBackground: rgb(128, 0, 0); */
+
+		/*  Header Scanlytics Section */
+		--scanlyticsLogoWidth: 60%;
+		--scanlyticsLogoHeight: 59%;
+		--scanlyticsTitleFontSize: 22px;
+
+		/*  Skelet Section body Point  Section */
+
+		--bodyPointsTitleFontSize: 20px;
+		--bodyplusFontSize: 30px;
+		--bodyPin1LeftPosition: 37%;
+		--bodyPin1TopPostion: 25%;
+	}
+}
+
+
 /* Large Screen */
 @media (min-width: 2560px) {
-	:root{
+	:root {
 		/* --leftHeaderBackground: rgb(31, 250, 170);  */
-		--Leftheader-height:  7%;
+		--Leftheader-height: 7%;
 		--leftHeaderInput-hieight: 50%;
 		--tabBtn-fontSize: 20px;
 		/* --tableHeaderBackground: rgb(227, 124, 21);  */
@@ -191,29 +217,26 @@ body {
 		--tableFont-Size: 17px;
 		--tableminHeight: 43px;
 		--tableHeaderWidthName: 39.7%;
-		--tableHeaderWidthId:  6.9%;
+		--tableHeaderWidthId: 6.9%;
 		--tableHeaderWidthbestand: 22.8%;
 
-
 		/* Product Component */
-		--productHeaderFontSize:  28px;
+		--productHeaderFontSize: 28px;
 		--productTextFontSize: 19px;
 		--productImageDeatilsGap: 7%;
 		/* --tabBackground: rgb(28, 128, 0); */
 
-
 		/*  Header Scanlytics Section */
 		--scanlyticsLogoWidth: 56%;
 		--scanlyticsLogoHeight: 62%;
-		--scanlyticsTitleFontSize:31px;
+		--scanlyticsTitleFontSize: 31px;
 
 		/*  Skelet Section body Point  Section */
 
-		--bodyPointsTitleFontSize: 30px; 
+		--bodyPointsTitleFontSize: 30px;
 		--bodyplusFontSize: 40px;
-		--bodyPin1LeftPosition: 37%; 
+		--bodyPin1LeftPosition: 37%;
 		--bodyPin1TopPostion: 25%;
-
 	}
 }
 
