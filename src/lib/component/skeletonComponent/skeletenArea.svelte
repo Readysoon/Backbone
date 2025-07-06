@@ -29,6 +29,11 @@
 	const handleAiToggle = () => {
 		aibotSectionToggle = !aibotSectionToggle;
 		menuToggle = false;
+		if(editToggle){
+			editToggle = false
+			handleEditOption()
+		}
+		
 	};
 
 
