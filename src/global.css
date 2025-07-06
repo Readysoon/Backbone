@@ -54,6 +54,8 @@ body {
 	--scanlyticsLogoWidth: 70%;
 	--scanlyticsLogoHeight: 90%;
 	--scanlyticsTitleFontSize: 38px;
+	--scanlyticsLogoWidthSection: 70%;
+	--scanlyticsLogoHighSectiont: 64.1%;
 
 	/*  Skelet Section body Point  Section */
 
@@ -61,6 +63,9 @@ body {
 	--bodyplusFontSize: 40px;
 	--bodyPin1LeftPosition: 37%;
 	--bodyPin1TopPostion: 25%;
+	--navBarIconSectionWidth: 70%; 
+	--navBarIconSectionHeight: 18%;
+
 
 }
 
@@ -126,7 +131,8 @@ body {
 		--scanlyticsLogoWidth: 55%;
 		--scanlyticsLogoHeight: 54%;
 		--scanlyticsTitleFontSize: 20px;
-
+		--scanlyticsLogoWidthSection: 73%;
+		--scanlyticsLogoHighSectiont: 60%;
 		/*  Skelet Section body Point  Section */
 
 		--bodyPointsTitleFontSize: 19px;
@@ -136,7 +142,9 @@ body {
 		--bodyPin2LeftPosition: 33.5%;
 		--bodyPin2TopPostion: 38%;
 		--bodyPin3LeftPosition: 28.5%;
-		--bodyPin3TopPostion: 49%
+		--bodyPin3TopPostion: 49%;
+		--navBarIconSectionWidth: 75%; 
+		--navBarIconSectionHeight: 15%;
 	}
 }
 /* L - Size Screen - Mid laptops (your 1807px screen) */
@@ -166,6 +174,8 @@ body {
 		--scanlyticsLogoWidth: 60%;
 		--scanlyticsLogoHeight: 59%;
 		--scanlyticsTitleFontSize: 22px;
+		--scanlyticsLogoWidthSection: 72%;
+		--scanlyticsLogoHighSectiont: 66%;
 
 		/*  Skelet Section body Point  Section */
 
@@ -173,10 +183,12 @@ body {
 		--bodyplusFontSize: 30px;
 		--bodyPin1LeftPosition: 37%;
 		--bodyPin1TopPostion: 25%;
-		--bodyPin2LeftPosition: 36%;
+		--bodyPin2LeftPosition: 35%;
 		--bodyPin2TopPostion: 38%;
-		--bodyPin3LeftPosition: 31.5%;
-		--bodyPin3TopPostion: 49%
+		--bodyPin3LeftPosition: 30.6%;
+		--bodyPin3TopPostion: 49%;
+		--navBarIconSectionWidth: 75%; 
+		--navBarIconSectionHeight: 17%;
 	}
 }
 
@@ -207,6 +219,8 @@ body {
 		--scanlyticsLogoWidth: 60%;
 		--scanlyticsLogoHeight: 59%;
 		--scanlyticsTitleFontSize: 22px;
+		--scanlyticsLogoWidthSection: 69%;
+		--scanlyticsLogoHighSectiont: 68%;
 
 		/*  Skelet Section body Point  Section */
 
@@ -217,7 +231,9 @@ body {
 		--bodyPin2LeftPosition: 36.5%;
 		--bodyPin2TopPostion: 38.5%;
 		--bodyPin3LeftPosition: 33%;
-		--bodyPin3TopPostion: 49%
+		--bodyPin3TopPostion: 49%;
+		--navBarIconSectionWidth: 70%; 
+		--navBarIconSectionHeight: 18%;
 	}
 }
 
@@ -249,6 +265,8 @@ body {
 		--scanlyticsLogoWidth: 56%;
 		--scanlyticsLogoHeight: 62%;
 		--scanlyticsTitleFontSize: 31px;
+		--scanlyticsLogoWidthSection: 70%;
+		--scanlyticsLogoHighSectiont: 64.1%;
 
 		/*  Skelet Section body Point  Section */
 
@@ -259,7 +277,9 @@ body {
 		--bodyPin2LeftPosition: 35.5%;
 		--bodyPin2TopPostion: 38%;
 		--bodyPin3LeftPosition: 31%;
-		--bodyPin3TopPostion: 49%
+		--bodyPin3TopPostion: 49%; 
+		--navBarIconSectionWidth: 70%; 
+		--navBarIconSectionHeight: 16.5%;
 		
 	}
 }

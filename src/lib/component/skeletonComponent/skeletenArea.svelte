@@ -71,6 +71,10 @@
 						</div>
 
 						<div class="NavBarSection">
+							<img src="edit1.png" alt="editIcon" class="editIcon" />
+						</div>
+
+						<div class="NavBarSection">
 							<img src="robo.png" alt="emailIcon" class="roboIcon" />
 						</div>
 						<div class="NavBarSection">
@@ -78,6 +82,10 @@
 						</div>
 					</div>
 				{/if}
+
+				<!-- <div class="navBarMenuContentAI">
+						AI
+				</div> -->
 			</div>
 		</div>
 		<div class="scanlyticsTitle">
@@ -162,8 +170,8 @@
 	}
 
 	.NavBarSection {
-		width: 70%;
-		height: 19.9%;
+		width: var(--navBarIconSectionWidth);
+		height: var(--navBarIconSectionHeight);
 		/* background-color: green; */
 		background-color: #000000a7;
 		border-radius: 50px;
@@ -208,7 +216,7 @@
 		position: absolute;
 		top: 100%;
 		width: 100%;
-		height: 300%;
+		height: 400%;
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
@@ -218,8 +226,8 @@
 	}
 
 	.NavBarSectionHead {
-		width: 70%;
-		height: 64.1%;
+		width: var(--scanlyticsLogoWidthSection);
+		height: var(--scanlyticsLogoHighSectiont);
 		/* background-color: green; */
 		background-color: #000000a7;
 		border-radius: 50px;
@@ -256,6 +264,11 @@
 		font-size: var(--scanlyticsTitleFontSize);
 	}
 	.signOutIcon {
+		width: 69%;
+		height: 67%;
+	}
+
+	.editIcon{
 		width: 69%;
 		height: 67%;
 	}
