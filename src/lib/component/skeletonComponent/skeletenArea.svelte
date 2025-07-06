@@ -10,7 +10,6 @@
 	let leftArmSkelet = $state(false);
 	let aibotSection = $state(false);
 
-
 	const handleMenutToggle = () => {
 		menuToggle = !menuToggle;
 	};
@@ -20,16 +19,15 @@
 		leftArmSkelet = true;
 	};
 
-    const handleGoBack= () => {
-        leftArmSkelet = false;
-        completSkelet = true;
-		
-    } 
+	const handleGoBack = () => {
+		leftArmSkelet = false;
+		completSkelet = true;
+	};
 
 	const handleAiToggle = () => {
-		aibotSection = !aibotSection
-		menuToggle = false
-	}
+		aibotSection = !aibotSection;
+		menuToggle = false;
+	};
 
 	$effect(() => {
 		const handleCallBruno = () => {
@@ -72,7 +70,7 @@
 					<!-- <img src="/logoww.png" alt="Logo" class="scanlyticsLogo" /> -->
 					{#if aibotSection}
 						<img src="robo.png" alt="emailIcon" class="roboIcon" />
-						{:else}
+					{:else}
 						<img src="/logoww.png" alt="Logo" class="scanlyticsLogo" />
 					{/if}
 				</div>
@@ -86,9 +84,11 @@
 							<img src="edit1.png" alt="editIcon" class="editIcon" />
 						</div>
 
-						<div class="NavBarSection"
-						style="background-color: {aibotSection ? ' rgba(249, 87, 6, 0.988)' : '#000000a7'};" 
-						on:click={handleAiToggle}>
+						<div
+							class="NavBarSection"
+							style="background-color: {aibotSection ? ' rgba(249, 87, 6, 0.988)' : '#000000a7'};"
+							on:click={handleAiToggle}
+						>
 							<img src="robo.png" alt="emailIcon" class="roboIcon" />
 						</div>
 						<div class="NavBarSection">
@@ -97,15 +97,13 @@
 					</div>
 				{/if}
 
-
 				{#if aibotSection}
-				<div class="navBarMenuContentAI">
-					<div class="aiVisualizer">
-						<!-- 1 -->
-					</div>
-			</div>
+					<!-- <div class="navBarMenuContentAI">
+						<div class="aiVisualizer">
+							
+						</div>
+					</div> -->
 				{/if}
-				
 			</div>
 		</div>
 		<div class="scanlyticsTitle">
@@ -132,12 +130,11 @@
 					<div class="shoulderTitle1dot1">forarm</div>
 					<div class="shoulderTitle1dot1Icon">+</div>
 				</div>
-                <div class="goBackShoulderPoll" on:click={handleGoBack}>
-                    <div class="shoulderSection">
-                        <img src="return.png" alt="returnIcon" class="returnIcon">
-                    </div>
-               
-                </div>
+				<div class="goBackShoulderPoll" on:click={handleGoBack}>
+					<div class="shoulderSection">
+						<img src="return.png" alt="returnIcon" class="returnIcon" />
+					</div>
+				</div>
 				<!-- <div class="red-dot-shoulder3">+</div> -->
 			</div>
 		{/if}
@@ -245,7 +242,7 @@
 		z-index: 5;
 	}
 
-	.navBarMenuContentAI{
+	.navBarMenuContentAI {
 		position: absolute;
 		top: 940%;
 		width: 100%;
@@ -258,7 +255,7 @@
 		z-index: 5;
 	}
 
-	.aiVisualizer{
+	.aiVisualizer {
 		width: 71%;
 		height: 90%;
 		/* background: rgba(31, 30, 30, 0.755); */
@@ -282,19 +279,17 @@
 		cursor: pointer;
 	}
 
-
 	.NavBarSectionHead:hover {
 		background-color: rgba(249, 87, 6, 0.988);
 		border: none;
-		
 	}
 
-	.scanlyticsLogo{
+	.scanlyticsLogo {
 		width: var(--scanlyticsLogoWidth);
 		height: var(--scanlyticsLogoHeight);
 	}
 
-	.scanlyticsLogo:hover{
+	.scanlyticsLogo:hover {
 		width: var(--scanlyticsLogoWidth);
 		height: var(--scanlyticsLogoHeight);
 	}
@@ -309,7 +304,7 @@
 		height: 67%;
 	}
 
-	.editIcon{
+	.editIcon {
 		width: 69%;
 		height: 67%;
 	}
@@ -355,7 +350,7 @@
 		/* background-color: #ed8181; */
 		position: relative;
 		display: flex;
-        flex-direction: column;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
@@ -402,9 +397,9 @@
 		border-top-left-radius: 50px;
 		border-bottom-left-radius: 50px;
 		padding-left: 5%;
-        display: flex;
-        align-items: center;
-        font-size: var(--bodyPointsTitleFontSize);
+		display: flex;
+		align-items: center;
+		font-size: var(--bodyPointsTitleFontSize);
 	}
 
 	.shoulderTitle1dot1Icon {
@@ -416,14 +411,14 @@
 		/* background-color: orage; */
 		border-top-right-radius: 50px;
 		border-bottom-right-radius: 50px;
-		font-size: var(	--bodyplusFontSize);
+		font-size: var(--bodyplusFontSize);
 		font-weight: 600;
 		border-left: 3px solid #2369f6dd;
 	}
 
 	.red-dot {
 		position: absolute;
-	    left: var(--bodyPin1LeftPosition); /* Adjust to match head position */
+		left: var(--bodyPin1LeftPosition); /* Adjust to match head position */
 		top: var(--bodyPin1TopPostion); /* Adjust to match head position */
 		width: 5%;
 		height: 4%;
@@ -492,39 +487,38 @@
 		color: black;
 	}
 
-    .goBackShoulderPoll{
-        /* background-color: green; */
-        position: absolute;
+	.goBackShoulderPoll {
+		/* background-color: green; */
+		position: absolute;
 		left: 35%; /* Adjust to match head position */
 		top: 92%; /* Adjust to match head position */
 		width: 30%;
 		height: 7%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	}
 
-    }
+	.shoulderSection {
+		background-color: #000000a7;
+		width: 45%;
+		height: 65%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		border-radius: 50px;
+		border: 2px solid #33333332;
+	}
 
-    .shoulderSection{
-        background-color: #000000a7;
-        width: 45%;
-        height: 65%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        border-radius: 50px;
-        border: 2px solid #33333332;
-    }
+	.returnIcon {
+		width: 40%;
+		height: 70%;
+	}
 
-    .returnIcon{
-        width: 40%;
-        height: 70%;
-    }
-
-    .shoulderSection:hover{
-        background-color:  rgba(249, 6, 6, 0.629);
+	.shoulderSection:hover {
+		background-color: rgba(249, 6, 6, 0.629);
 		border: none;
-    }
+	}
 </style>
