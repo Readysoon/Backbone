@@ -1,5 +1,5 @@
 <script lang="ts">
-	let menuToggle = $state(false);
+	let menuToggle = $state(true);
 	import { Application } from '@splinetool/runtime';
 	import skelletsvgIcon from '../../../../static/svgIcons/skelCompl.svg';
 
