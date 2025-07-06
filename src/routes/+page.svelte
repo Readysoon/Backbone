@@ -2,30 +2,70 @@
 	import HeaderArea from '$lib/component/Header/headerArea.svelte';
 	import SkeletenArea from '$lib/component/skeletonComponent/skeletenArea.svelte';
 
+	let innerWidth: any;
+
 	//   import * as productJson from '../../static/product.json';
 	import Table from '$lib/component/tableComponent/table.svelte';
 	import Tab from '$lib/component/TabOption/tab.svelte';
+	import { Circle2 } from 'svelte-loading-spinners';
 	let selectedOptionState = $state('Gesamt');
+	let isMobile = $state(false);
+	let loadingPage = $state(true);
 
 	const handleTableOptionUpdate = (event: any) => {
 		selectedOptionState = event.detail;
 	};
+
+	$effect(() => {
+		const handleDeviceCheck = () => {
+			loadingPage = false;
+			console.log('innerwidth device check', innerWidth);
+			if (innerWidth <= 1400) {
+				console.log('inner with is smaller');
+				isMobile = true;
+			} else {
+				isMobile = false;
+			}
+		};
+
+		if (loadingPage) {
+			handleDeviceCheck();
+		}
+	});
 </script>
 
-<main>
-	<div class="mainContent">
-		<div class="skeletArea">
-			<SkeletenArea />
-		</div>
-		<div class="invetarArea">
-			<HeaderArea />
+<svelte:window bind:innerWidth />
 
-			<Tab on:optionUpdate={handleTableOptionUpdate} {selectedOptionState} />
 
-			<Table {selectedOptionState} />
-		</div>
+
+{#if loadingPage}
+	<div class="laodingPageSection">
+		<Circle2 size="150" colorOuter="blue" unit="px" durationInner="1s" />
 	</div>
-</main>
+{:else}
+	
+		{#if isMobile}
+			<div class="mobilePage">
+				<p>Unfortunately, the app is not available on this screen size. Please switch to a different device and try again later.</p>
+			</div>
+		{:else}
+		<main>
+			<div class="mainContent">
+				<div class="skeletArea">
+					<SkeletenArea />
+				</div>
+				<div class="invetarArea">
+					<HeaderArea />
+
+					<Tab on:optionUpdate={handleTableOptionUpdate} {selectedOptionState} />
+
+					<Table {selectedOptionState} />
+				</div>
+			</div>
+		</main>
+		{/if}
+	
+{/if}
 
 <style>
 	main {
@@ -41,6 +81,30 @@
 		background-color: #cacaca;
 		height: 100vh;
 		padding: 10px;
+	}
+
+	.laodingPageSection {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		background-color: rgba(0, 0, 0, 0.097);
+		/* color: rgb(15, 14, 14); */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.mobilePage {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		color: rgb(255, 255, 255);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	    text-align: center;
+		font-family: system-ui;
+		padding: 5%;
+	
 	}
 
 	.mainContent {
