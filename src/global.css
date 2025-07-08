@@ -216,24 +216,25 @@ body {
 		/* --tabBackground: rgb(128, 0, 0); */
 
 		/*  Header Scanlytics Section */
-		--scanlyticsLogoWidth: 60%;
+		--scanlyticsLogoWidth: 62%;
 		--scanlyticsLogoHeight: 59%;
 		--scanlyticsTitleFontSize: 22px;
-		--scanlyticsLogoWidthSection: 69%;
-		--scanlyticsLogoHighSectiont: 68%;
+		--scanlyticsLogoWidthSection: 72%;
+		--scanlyticsLogoHighSectiont: 67%;
+		--navBarIconSectionWidth: 75%; 
+		--navBarIconSectionHeight: 16%;
 
 		/*  Skelet Section body Point  Section */
 
 		--bodyPointsTitleFontSize: 20px;
 		--bodyplusFontSize: 30px;
-		--bodyPin1LeftPosition: 38%;
+		--bodyPin1LeftPosition: 36%;
 		--bodyPin1TopPostion: 25%;
-		--bodyPin2LeftPosition: 36.5%;
-		--bodyPin2TopPostion: 38.5%;
-		--bodyPin3LeftPosition: 33%;
+		--bodyPin2LeftPosition: 34.5%;
+		--bodyPin2TopPostion: 38%;
+		--bodyPin3LeftPosition: 30%;
 		--bodyPin3TopPostion: 49%;
-		--navBarIconSectionWidth: 70%; 
-		--navBarIconSectionHeight: 18%;
+		
 	}
 }
 
