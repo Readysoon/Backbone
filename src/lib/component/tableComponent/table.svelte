@@ -11,6 +11,7 @@
 	import * as ProductData from '../../../../static/product.json';
 	import ProductDetails from './productDetails.svelte';
 	import { Circle2 } from 'svelte-loading-spinners';
+	import { handleDeleteMessage } from '../skeletonComponent/skeletenArea.svelte';
 
 	let { selectedOptionState } = $props();
 	let selectedItem: any = $state(null);
@@ -30,13 +31,17 @@
 	};
 
 	// Handles object delete feature from the table of product content
-	const handledeleteObj = (eventId: any) => {
-		let filterdProductData = inventarData.productContent.filter((item) => item.Id != eventId);
+	const handledeleteObj = (itemId: any, itemName: string) => {
+
+		handleDeleteMessage(itemName)
+		let filterdProductData = inventarData.productContent.filter((item) => item.Id != itemId);
 
 		inventarData = {
 			...inventarData,
 			productContent: filterdProductData
 		};
+
+
 	};
 
 	$effect(() => {
@@ -113,7 +118,7 @@
 								class="boxContentObj"
 								class:editModeStyle={editMode}
 								on:click={editMode
-									? () => handledeleteObj(itemContent.Id)
+									? () => handledeleteObj(itemContent.Id, itemContent.name)
 									: () => handleselectedObj(itemContent)}
 							>
 								{#if editMode}

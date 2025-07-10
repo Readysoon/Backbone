@@ -1,3 +1,22 @@
+
+<script module>
+	let deleteMessageToggle = $state(false);
+	let deleteMessage = $state("")
+
+
+	export function handleDeleteMessage(itemName: string){
+		deleteMessageToggle = true
+		deleteMessage = itemName
+
+		const intervalId = setInterval(() => {
+
+			deleteMessageToggle = false
+			clearInterval(intervalId)
+		}, 3500)
+		
+	}
+</script>
+
 <script lang="ts">
 	let menuToggle = $state(true);
 	import { Application } from '@splinetool/runtime';
@@ -10,10 +29,20 @@
 	let completSkelet = $state(true);
 	let leftArmSkelet = $state(false);
 	let aibotSectionToggle = $state(false);
+	let editSectionToggle = $state(false);
 	let editToggle = $state(false);
+	let deleteToggle = $state(false);
 
 	const handleMenutToggle = () => {
 		menuToggle = !menuToggle;
+		editSectionToggle = false;
+		
+
+		if (editToggle && deleteToggle) {
+			deleteToggle = false;
+			editToggle = false;
+			handleEditOption();
+		}
 	};
 
 	const handleShoulderToggle = () => {
@@ -29,18 +58,39 @@
 	const handleAiToggle = () => {
 		aibotSectionToggle = !aibotSectionToggle;
 		menuToggle = false;
-		if(editToggle){
-			editToggle = false
-			handleEditOption()
+		if (editToggle) {
+			editToggle = false;
+			handleEditOption();
 		}
-		
+	};
+
+	const handleEditMode = () => {
+		editToggle = true;
+		editSectionToggle = !editSectionToggle;
+		// deleteToggle = false
+		// handleEditOption()
 	};
 
 
-	const handleEditMode= () => { 
-		editToggle = !editToggle
-		handleEditOption()
+	const handleEditToggleCall= () => { 
+		editToggle = true;
+		editSectionToggle = !editSectionToggle;
+		if(deleteToggle){
+		deleteToggle = false;
+		handleEditOption();
+		}		
 	}
+
+
+	const handleDeleteProduct = () => {
+		
+		editSectionToggle = false;
+		if (!deleteToggle) {
+			deleteToggle = true;
+			handleEditOption();
+		}
+		
+	};
 
 	$effect(() => {
 		const handleCallBruno = () => {
@@ -65,8 +115,13 @@
 		};
 
 		handleCallBruno();
+
+
+	
 	});
 </script>
+
+
 
 <div class="skeletSection">
 	<div class="scanlyticsHader">
@@ -77,7 +132,9 @@
 			<div class="navBarMenuHeader">
 				<div
 					class="NavBarSectionHead"
-					style="background-color: {menuToggle ? ' rgba(249, 87, 6, 0.988)' : '#000000a7'};"
+					style="background-color: {(menuToggle && !editToggle) || aibotSectionToggle
+						? ' rgba(249, 87, 6, 0.988)'
+						: '#000000a7'};"
 					on:click={handleMenutToggle}
 				>
 					<!-- <img src="/logoww.png" alt="Logo" class="scanlyticsLogo" /> -->
@@ -93,15 +150,23 @@
 							<img src="plus1.png" alt="plusIcon" class="plusIcon" />
 						</div>
 
-						<div class="NavBarSection" 
-						style="background-color: {editToggle ? ' rgba(249, 87, 6, 0.988)' : '#000000a7'};"
-						on:click={handleEditMode}>
-							<img src="edit1.png" alt="editIcon" class="editIcon" />
+						<div
+							class="NavBarSection"
+							style="background-color: {editToggle ? ' rgba(249, 87, 6, 0.988)' : '#000000a7'};"
+							on:click={handleEditMode}
+						>
+							{#if deleteToggle}
+								<img src="del.png" alt="deleteIcon" class="deleteIcon" />
+							{:else}
+								<img src="edit1.png" alt="editIcon" class="editIcon" />
+							{/if}
 						</div>
 
 						<div
 							class="NavBarSection"
-							style="background-color: {aibotSectionToggle ? ' rgba(249, 87, 6, 0.988)' : '#000000a7'};"
+							style="background-color: {aibotSectionToggle
+								? ' rgba(249, 87, 6, 0.988)'
+								: '#000000a7'};"
 							on:click={handleAiToggle}
 						>
 							<img src="robo.png" alt="emailIcon" class="roboIcon" />
@@ -111,6 +176,23 @@
 						</div>
 					</div>
 				{/if}
+
+				{#if editSectionToggle}
+					<div class="editToggleSectionContainer">
+						<div class="editContentArea">
+							<div class="editContent"
+							style="background-color: {editToggle && !deleteToggle && ' rgba(249, 87, 6, 0.988)'};"
+							on:click={handleEditToggleCall}
+							>Bearbeiten</div>
+							<div class="editContent" 
+							style="background-color: {deleteToggle && ' rgba(249, 87, 6, 0.988)'};"
+							on:click={handleDeleteProduct}>Löschen</div>
+						</div>
+					</div>
+				{/if}
+
+
+				
 
 				{#if aibotSectionToggle}
 					<!-- <div class="navBarMenuContentAI">
@@ -133,6 +215,22 @@
 				<div class="red-dot" on:click={handleShoulderToggle}>+</div>
 				<div class="red-dot1">+</div>
 				<div class="red-dot2">+</div>
+
+				
+				{#if deleteMessageToggle}
+
+				
+					<div class="deleteMessageContainer">
+						<div class="deleteText">
+							The Product {deleteMessage} was successfully deleted!
+							<div class="deleteMessageIconSection">
+								<img src="remove.png" alt="deleteMessageIcon" class="deleteMessageIcon" />
+							</div> 
+						</div>
+						
+							
+					</div>
+				{/if}
 			</div>
 		{:else if leftArmSkelet}
 			<div class="skeletShoulder">
@@ -150,6 +248,7 @@
 						<img src="return.png" alt="returnIcon" class="returnIcon" />
 					</div>
 				</div>
+
 				<!-- <div class="red-dot-shoulder3">+</div> -->
 			</div>
 		{/if}
@@ -257,6 +356,126 @@
 		z-index: 5;
 	}
 
+	.editToggleSectionContainer {
+		position: absolute;
+		top: 240%;
+		left: 100%;
+		width: 250%;
+		height: 200%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-direction: column;
+		/* background-color: rgb(187, 202, 21); */
+		z-index: 5;
+	}
+
+	.editContentArea {
+		width: 95%;
+		height: 95%;
+		/* background: rgba(31, 30, 30, 0.755); */
+		/* background-color: #000000a7; */
+		background-color: #585858;
+		border-radius: 2px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 5%;
+	
+		/* border: 1px solid white; */
+		gap: 10px;
+		/* justify-content: center; */
+	}
+
+	.editContent {
+		width: 100%;
+		height: 16%;
+		/* background-color: rgb(251, 246, 247);  */
+		/* background-color: rgb(255, 255, 255); */
+		font-size: 15px;
+		padding-left: 2%;
+		/* border-top: 1px solid rgb(1, 1, 1);
+		border-bottom: 1px solid rgb(1, 1, 1); */
+		cursor: pointer;
+		color: white;
+	}
+
+	.editContent:hover {
+		width: 100%;
+		height: 16%;
+		/* background-color: rgb(251, 246, 247);  */
+
+		/* background-color: rgb(223, 245, 249);  */
+		background-color: rgba(249, 87, 6, 0.988);
+	
+		color: white;
+	}
+
+	@keyframes shake {
+		0% {
+			transform: translateX(0);
+		}
+		20% {
+			transform: translateX(-5px);
+		}
+		40% {
+			transform: translateX(5px);
+		}
+		60% {
+			transform: translateX(-5px);
+		}
+		80% {
+			transform: translateX(5px);
+		}
+		100% {
+			transform: translateX(0);
+		}
+	}
+
+
+	.deleteMessageContainer{
+		position: absolute;
+		left: 20%; /* Adjust to match head position */
+		top: 93%; /* Adjust to match head position */
+		width: 60%;
+		height: 5%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		background-color: rgba(30, 29, 29, 0.855);
+		border: 2px solid rgb(66, 66, 66);
+		text-align: center;
+		font-size: 18px;
+		border-radius: 7px;
+		color: rgb(255, 255, 255);
+		animation: shake 2.4s ease-in-out infinite;
+	}
+
+
+	.deleteText{
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* background-color: pink; */
+	}
+
+	.deleteMessageIconSection{
+		width: 5%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: 1%;
+		/* background-color: green; */
+	}
+	.deleteMessageIcon{
+		width: 80%;
+		height: 40%;
+		
+	}
 	.navBarMenuContentAI {
 		position: absolute;
 		top: 940%;
@@ -324,6 +543,10 @@
 		height: 67%;
 	}
 
+	.deleteIcon {
+		width: 57%;
+		height: 59%;
+	}
 	.plusIcon {
 		width: 50%;
 		height: 50%;

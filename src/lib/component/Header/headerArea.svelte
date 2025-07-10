@@ -143,27 +143,4 @@
 
 
 
-    
-    /* Smart Phones */
-	@media (min-width: 320px) and (max-width: 460px) {
-
-    }
-    /*  ipads (e.g. 1366px - 1440px wide) */
-	@media (min-width: 768px){
-
-    }
-
-    	/* Small laptops (e.g. 1366px - 1440px wide) */
-	@media (min-width: 1280px){
-
-    }
-    	/* Mid laptops (your 1807px screen) */
-	@media (min-width: 1700px) {
-
-    }
-
-    /* Large Screen */
-    @media (min-width: 2560px){
-
-    }
 </style>
