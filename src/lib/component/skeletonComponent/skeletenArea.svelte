@@ -42,6 +42,8 @@
 			deleteToggle = false;
 			editToggle = false;
 			handleEditOption();
+		}else if(editToggle){
+			editToggle = false;
 		}
 	};
 
@@ -158,7 +160,7 @@
 							{#if deleteToggle}
 								<img src="del.png" alt="deleteIcon" class="deleteIcon" />
 							{:else}
-								<img src="edit1.png" alt="editIcon" class="editIcon" />
+								<img src="edit2.png" alt="editIcon" class="editIcon" />
 							{/if}
 						</div>
 
@@ -539,8 +541,8 @@
 	}
 
 	.editIcon {
-		width: 69%;
-		height: 67%;
+		width: 50%;
+		height: 50%;
 	}
 
 	.deleteIcon {
