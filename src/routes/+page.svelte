@@ -12,22 +12,31 @@
 	let isMobile = $state(false);
 	let loadingPage = $state(true);
 
+	import { onMount } from 'svelte';
+
+	function checkDevice() {
+		isMobile = window.innerWidth <= 1400;
+	}
+
 	const handleTableOptionUpdate = (event: any) => {
 		selectedOptionState = event.detail;
 	};
 
 	$effect(() => {
-		const handleDeviceCheck = () => {
-			loadingPage = false;
-			if (innerWidth <= 1400) {
-			
-				isMobile = true;
-			} else {
-				isMobile = false;
-			}
+		checkDevice(); // Initial check
+
+		const handleResize = () => {
+			checkDevice();
 		};
 
-		if (loadingPage) {
+		// runs the code everytime the window is resized
+		window.addEventListener('resize', handleResize);
+
+		const handleDeviceCheck = () => {
+			loadingPage = false;
+		};
+
+		if(loadingPage) {
 			handleDeviceCheck();
 		}
 	});
@@ -35,36 +44,32 @@
 
 <svelte:window bind:innerWidth />
 
-
-
 {#if loadingPage}
 	<div class="laodingPageSection">
 		<RingLoader size="100" color="orange" unit="px" duration="1s" />
-		
+	</div>
+{:else if isMobile}
+	<div class="mobilePage">
+		<p>
+			Unfortunately, the app is not available on this screen size. Please switch to a different
+			device.
+		</p>
 	</div>
 {:else}
-	
-		{#if isMobile}
-			<div class="mobilePage">
-				<p>Unfortunately, the app is not available on this screen size. Please switch to a different device.</p>
+	<main>
+		<div class="mainContent">
+			<div class="skeletArea">
+				<SkeletenArea />
 			</div>
-		{:else}
-		<main>
-			<div class="mainContent">
-				<div class="skeletArea">
-					<SkeletenArea />
-				</div>
-				<div class="invetarArea">
-					<HeaderArea />
+			<div class="invetarArea">
+				<HeaderArea />
 
-					<Tab on:optionUpdate={handleTableOptionUpdate} {selectedOptionState} />
+				<Tab on:optionUpdate={handleTableOptionUpdate} {selectedOptionState} />
 
-					<Table {selectedOptionState} />
-				</div>
+				<Table {selectedOptionState} />
 			</div>
-		</main>
-		{/if}
-	
+		</div>
+	</main>
 {/if}
 
 <style>
@@ -104,10 +109,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	    text-align: center;
+		text-align: center;
 		font-family: system-ui;
 		padding: 5%;
-	
 	}
 
 	.mainContent {
