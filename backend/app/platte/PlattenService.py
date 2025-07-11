@@ -1,4 +1,5 @@
 from fastapi import HTTPException
+from surrealdb import RecordID
 
 
 async def CreatePlatteService(platte, db):
@@ -65,6 +66,30 @@ async def UpdatePlatteService(platten_id, platte, db):
         raise HTTPException(status_code=500, detail=f"Database operation failed: {str(e)}")
 
 
+async def GetPlatteByIDService(platten_id, db):
+
+    # print(platten_id)
+    
+    try:
+        # Retrieve specific platte by ID from the database
+        result = await db.select(RecordID('platte', platten_id))
+
+        # print(result)
+        
+        if not result:
+            raise HTTPException(status_code=404, detail=f"Platte with ID {platten_id} not found")
+        
+        return {
+            "status": "success",
+            "result": result
+        }
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Database operation failed: {str(e)}")
+
+
 async def GetAllPlattenService(db):
     try:
         # Retrieve all platten from the database
@@ -77,4 +102,25 @@ async def GetAllPlattenService(db):
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Database operation failed: {str(e)}")
+
+    
+async def DeletePlatteByIDService(platten_id, db):
+    try:
+        # Delete specific platte by ID from the database
+        result = await db.delete(f"platte:{platten_id}")
+        
+        if not result:
+            raise HTTPException(status_code=404, detail=f"Platte with ID {platten_id} not found")
+        
+        return {
+            "status": "success",
+            "message": f"Platte with ID {platten_id} deleted successfully",
+            "result": result
+        }
+    
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Database operation failed: {str(e)}")
+
     

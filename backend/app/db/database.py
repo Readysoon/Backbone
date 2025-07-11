@@ -33,6 +33,9 @@ async def get_db():
 
         yield db
         
+    except HTTPException:
+        # Re-raise HTTP exceptions from service layer
+        raise
     except Exception as e:
         print(f"Database connection error: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Database connection failed: {str(e)}")
