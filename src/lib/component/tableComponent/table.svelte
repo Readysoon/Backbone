@@ -11,7 +11,7 @@
 	import * as ProductData from '../../../../static/product.json';
 	import ProductDetails from './productDetails.svelte';
 	import { Circle2 } from 'svelte-loading-spinners';
-	import { handleDeleteMessage } from '../skeletonComponent/skeletenArea.svelte';
+	import { handleDeleteMessage } from '../skeletonComponent/Body/contentBody.svelte';
 
 	let { selectedOptionState } = $props();
 	let selectedItem: any = $state(null);

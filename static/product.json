@@ -9,7 +9,7 @@
     "productContent": [
       {
         "Id": 1,
-        "name": "Platten (Osteosyntheseplatten)",
+        "name": "Osteosyntheseplatten",
         "stock": "Clavicle",
         "status": 100,
         "productzustand": "Verfügbar",
@@ -54,7 +54,7 @@
       },
       {
         "Id": 4,
-        "name": "Knochendrähte (Kirschnerdrähte)",
+        "name": "Kirschnerdrähte",
         "stock": "Proximal humerus",
         "status": 49,
         "productzustand": "Warnung",
@@ -69,7 +69,7 @@
       },
       {
         "Id": 5,
-        "name": "Endoprothesen (z.B. Hüftprothese, Knieprothese)",
+        "name": "Endoprothesen",
         "stock": "Shoulder",
         "status": 38,
         "productzustand": "Warnung",
@@ -114,7 +114,7 @@
       },
       {
         "Id": 8,
-        "name": "Spacer (Platzhalter)",
+        "name": "Spacer",
         "stock": "Proximal forearm",
         "status": 32,
         "productzustand": "Warnung",
@@ -189,7 +189,7 @@
       },
       {
         "Id": 13,
-        "name": "Platten (Osteosyntheseplatten)",
+        "name": "Osteosyntheseplatten",
         "stock": "Pelvis",
         "status": 47,
         "productzustand": "Warnung",
@@ -234,7 +234,7 @@
       },
       {
         "Id": 16,
-        "name": "Knochendrähte (Kirschnerdrähte)",
+        "name": "Knochendrähte",
         "stock": "Fibula",
         "status": 36,
         "productzustand": "Warnung",
@@ -249,7 +249,7 @@
       },
       {
         "Id": 17,
-        "name": "Endoprothesen (z.B. Hüftprothese, Knieprothese)",
+        "name": "Knieprothese",
         "stock": "Patella",
         "status": 93,
         "productzustand": "Verfügbar",
@@ -294,7 +294,7 @@
       },
       {
         "Id": 20,
-        "name": "Spacer (Platzhalter)",
+        "name": "Spacer",
         "stock": "Vertebrae",
         "status": 78,
         "productzustand": "Verfügbar",
