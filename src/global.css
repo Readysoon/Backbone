@@ -56,9 +56,11 @@ body {
 	--scanlyticsTitleFontSize: 38px;
 	--scanlyticsLogoWidthSection: 70%;
 	--scanlyticsLogoHighSectiont: 64.1%;
+	--editFontSize: 15px;
+	
+
 
 	/*  Skelet Section body Point  Section */
-
 	--bodyPointsTitleFontSize: 40px;
 	--bodyplusFontSize: 40px;
 	--bodyPin1LeftPosition: 37%;
@@ -151,7 +153,8 @@ body {
 		--navBarIconSectionHeight: 15%;
 		--deleteMessageFontSize: 10px; 
 		--deleteMessageIconHeight: 75%;
-		--deleteMessageIconWidth: 38%
+		--deleteMessageIconWidth: 38%;
+		--editFontSize: 12px;
 	}
 }
 /* L - Size Screen - Mid laptops (your 1807px screen) */
@@ -198,7 +201,8 @@ body {
 		--navBarIconSectionHeight: 17%;
 		--deleteMessageFontSize: 12px;
 		--deleteMessageIconHeight: 80%;
-		--deleteMessageIconWidth: 40%
+		--deleteMessageIconWidth: 40%;
+		--editFontSize: 12px;
 	}
 }
 
@@ -294,8 +298,8 @@ body {
 		--navBarIconSectionHeight: 16.5%;
 		--deleteMessageFontSize: 18px; 
 		--deleteMessageIconHeight: 85%;
-		--deleteMessageIconWidth: 45%
-		
+		--deleteMessageIconWidth: 45%;
+		--editFontSize: 15px;
 	}
 }
 

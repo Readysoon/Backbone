@@ -254,7 +254,7 @@
 		height: 16%;
 		/* background-color: rgb(251, 246, 247);  */
 		/* background-color: rgb(255, 255, 255); */
-		font-size: 15px;
+		font-size: var(--editFontSize);
 		padding-left: 2%;
 		/* border-top: 1px solid rgb(1, 1, 1);
 		border-bottom: 1px solid rgb(1, 1, 1); */
@@ -266,10 +266,8 @@
 		width: 100%;
 		height: 16%;
 		/* background-color: rgb(251, 246, 247);  */
-
 		/* background-color: rgb(223, 245, 249);  */
 		background-color: rgba(249, 87, 6, 0.988);
-
 		color: white;
 	}
 
