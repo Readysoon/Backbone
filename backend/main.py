@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-from app.db.dbController import router as db_router
+from app.platte.PlattenController import router as platten_router
 # from app.db.database import get_db
 
 app = FastAPI()
@@ -24,7 +24,7 @@ app.add_middleware(
     allow_headers=["*"],  # Allow all headers
 )
 
-app.include_router(db_router)
+app.include_router(platten_router)
 
 @app.get("/")
 async def read_root():
