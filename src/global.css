@@ -69,7 +69,14 @@ body {
 	--navBarIconSectionHeight: 18%;
 	--deleteMessageFontSize: 18px;
 	--deleteMessageIconHeight: 85%;
-	--deleteMessageIconWidth: 45%
+	--deleteMessageIconWidth: 45%;
+
+
+
+	/* Default Close Image screen for smart Phones and Tablet */
+
+	/* '--smartPhoneIconWidth: 50%;
+	--smartPhoneIconHeight: 50%;' */
 
 
 }
@@ -78,6 +85,15 @@ body {
 /* Media Queries */
 /* XS - Size Screen - Smart Phones  */
 @media (min-width: 320px) and (max-width: 460px) {
+
+	:root{
+		--smartPhoneIconWidth: 50%;
+		--smartPhoneIconHeight: 15%;
+
+		--tableIconWidth: 12%;
+		--tabletIconHeight: 50%;
+	}
+
 }
 /* S - Size Screen - ipads (e.g. 1366px - 1440px wide) */
 @media (min-width: 768px) {

@@ -116,14 +116,14 @@
 	}
 	.noSmartPhoneIcon{
 		/* background-color: white; */
-		height: 50%;
-		width: 5%;
+		height: var(--smartPhoneIconWidth);
+		width: var(--smartPhoneIconHeight);
 
 	}
 
 	.noTabletIcon{
-		height: 50%;
-		width: 5%;
+		height: var(--tabletIconHeight);
+		width:  var(--tableIconWidth);
 	}
 
 	.laodingPageSection {
