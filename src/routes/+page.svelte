@@ -53,7 +53,17 @@
 		<p>
 			Unfortunately, the app is not available on this screen size. Please switch to a different
 			device.
+			
 		</p>
+
+		<div class="noSmallDeviceArea">
+			<img src="noSma.png" alt="noSmartPhoneIcon" class="noSmartPhoneIcon">
+			<div class="deviceWallSection"></div>
+
+			<img src="noTab.png" alt="noTabletIcon" class="noTabletIcon">
+
+		</div>
+		
 	</div>
 {:else}
 	<main>
@@ -88,6 +98,34 @@
 		padding: 10px;
 	}
 
+	.noSmallDeviceArea{
+		width: 100%;
+		height: 10%;
+		/* background-color: #47161692; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 3%;
+	}
+
+
+	.deviceWallSection{
+		width: 0.2%;
+		height: 100%;
+		background-color: #fff;
+	}
+	.noSmartPhoneIcon{
+		/* background-color: white; */
+		height: 50%;
+		width: 5%;
+
+	}
+
+	.noTabletIcon{
+		height: 50%;
+		width: 5%;
+	}
+
 	.laodingPageSection {
 		width: 100%;
 		height: 100vh;
@@ -108,6 +146,8 @@
 		color: rgb(255, 255, 255);
 		display: flex;
 		justify-content: center;
+		flex-direction: column;
+		gap: 5%;
 		align-items: center;
 		text-align: center;
 		font-family: system-ui;
