@@ -9,17 +9,16 @@
 	function resetEditAndDelete() {
 		editToggle = false;
 		deleteToggle = false;
-		handleEditOption();
+		
 	}
 
 	const handleMenutToggle = () => {
 		menuToggle = !menuToggle;
 		editSectionToggle = false;
 
-		if (editToggle && deleteToggle) {
+		if (editToggle || deleteToggle) {
+			handleEditOption(false);
 			resetEditAndDelete();
-		} else if (!editToggle) {
-			editToggle = false;
 		}
 	};
 
@@ -27,13 +26,12 @@
 		aibotSectionToggle = !aibotSectionToggle;
 		menuToggle = false;
 
-		if (editToggle && !deleteToggle) {
+		if (editToggle || deleteToggle) {
+			handleEditOption(false);
 			editToggle = false;
 			editSectionToggle = false;
 			deleteToggle = false;
-		} else if (editToggle) {
-			handleEditOption();
-		}
+		} 
 	};
 
 	const handleEditMode = () => {
@@ -46,7 +44,7 @@
 		editSectionToggle = !editSectionToggle;
 		if (deleteToggle) {
 			deleteToggle = false;
-			handleEditOption();
+			handleEditOption(false);
 		}
 	};
 
@@ -54,7 +52,7 @@
 		editSectionToggle = false;
 		if (!deleteToggle) {
 			deleteToggle = true;
-			handleEditOption();
+			handleEditOption(true);
 		}
 	};
 </script>

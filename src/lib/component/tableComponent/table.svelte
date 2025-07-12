@@ -2,8 +2,8 @@
 	let editMode = $state(false);
 
 	// Enables the table to react towards the edit toggle from the menu component
-	export function handleEditOption() {
-		editMode = !editMode;
+	export function handleEditOption(deleteStateMode: any) {
+		editMode = deleteStateMode;
 	}
 </script>
 
