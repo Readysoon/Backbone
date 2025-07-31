@@ -2,6 +2,9 @@ import { json } from '@sveltejs/kit';
 import { Room } from 'livekit-client';
 import { env } from '$env/dynamic/private';
 
+
+
+
 const wsURL = env.WSURL;
 
 const handleFetchToken = async () => {

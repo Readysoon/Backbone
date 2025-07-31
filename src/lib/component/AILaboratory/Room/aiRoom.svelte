@@ -68,7 +68,7 @@
 				} else {
 					setError({
 						message: 'An unexpected error occurred',
-						type: 'network',
+						type: 'connnection',
 						code: null,
 						details: error
 					});
