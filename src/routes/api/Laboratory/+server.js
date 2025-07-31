@@ -1,8 +1,8 @@
 import { json } from '@sveltejs/kit';
 import { Room } from 'livekit-client';
+import { env } from '$env/dynamic/private';
 
-const room = new Room();
-const wsURL = 'wss://scanlyticsvoiceagentbot-jaea2320.livekit.cloud';
+const wsURL = env.WSURL;
 
 const handleFetchToken = async () => {
 	try {
@@ -10,33 +10,24 @@ const handleFetchToken = async () => {
 			method: 'GET'
 		});
 
-		const data = await res.json();
-		return data;
-		//  console.log('data', data);
+		const token = await res.json();
+		
+		return token;
 	} catch (error) {
 		console.error('Error on handleFetchToken', error);
-	}
-	return 'assas';
-};
-const handleConnectToRoom = async () => {
-	const token = await handleFetchToken();
-
-	console.log('token', token);
-
-	// if (token) {
-	// 	await room.connect(wsURL, token);
-	// 	console.log('connected to room', room.name);
-
-	// 	// Publish local camera and mic tracks
-	// 	await room.localParticipant.enableCameraAndMicrophone();
-	// }
+	};
 };
 
 /** @type {import('./$types').RequestHandler} */
 export async function POST({ request }) {
 	const { data } = await request.json();
 
-	const token = handleConnectToRoom();
+	const token = await handleFetchToken();
+	if (token) {
+		console.log('token', token);
+
+		return json({ token: token, wsURLData: wsURL , statuscode: 200});
+	}
 	// console.log('data', data);
-	return json({ message: 'successful connected' });
+	return json({ message: 'Unsuccessful connection', statuscode: 400 });
 }
